@@ -10,7 +10,7 @@ export const ProjectTile = ({ imgSrc, projectName, description, projectHref }) =
         {description}
         {projectHref &&
           <a className="ProjectTile-link" href={projectHref} target="_blank">
-            <MaterialIcon icon='link' />
+            <MaterialIcon icon="link" />
           </a>
         }
       </p>
@@ -70,5 +70,12 @@ export const ProjectTile = ({ imgSrc, projectName, description, projectHref }) =
     `}</style>
   </div>
 )
+
+ProjectTile.propTypes = {
+  imgSrc: React.PropTypes.string,
+  projectName: React.PropTypes.string,
+  description: React.PropTypes.string,
+  projectHref: React.PropTypes.string
+}
 
 export default ProjectTile
