@@ -48,13 +48,13 @@ export const ProjectTile = ({ imgSrc, projectName, description, projectHref }) =
         margin-left: .33rem;
       }
 
-      .ProjectTile-link i {
+      .ProjectTile-link {
         color: #FB0101;
         cursor: pointer;
         transition: .5s ease-in-out;
       }
 
-      .ProjectTile-link:hover i {
+      .ProjectTile-link:hover {
         opacity: .4;
       }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
-const MaterialIcon = ({ icon }) => (
-  <i className={`icon icon-${icon}`}>
+const MaterialIcon = ({ icon, style }) => (
+  <i className={`icon icon-${icon}`} style={style}>
     <style jsx>{`
       @font-face {
         font-family: "icomoon";
@@ -28,23 +28,24 @@ const MaterialIcon = ({ icon }) => (
       }
 
       .icon-mail:before {
-        content: '\e901';
+        content: "\\e901";
       }
       .icon-link:before {
-        content: '\e9cb';
+        content: "\\e9cb";
       }
       .icon-facebook:before {
-        content: '\ea90';
+        content: "\\ea90";
       }
       .icon-instagram:before {
-        content: '\ea92';
+        content: "\\ea92";
       }
     `}</style>
   </i>
 )
 
 MaterialIcon.propTypes = {
-  icon: React.PropTypes.string
+  icon: React.PropTypes.string,
+  style: React.PropTypes.shape({})
 }
 
 export default MaterialIcon

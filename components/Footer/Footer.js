@@ -2,6 +2,11 @@ import React from 'react'
 import MaterialIcon from '../MaterialIcon'
 import format from 'date-fns/format'
 
+const footerIcon = {
+  marginRight: '.5rem',
+  paddingLeft: '.1rem'
+}
+
 export default () => (
   <div className="Footer">
     <div className="container Footer-wrapper">
@@ -9,13 +14,13 @@ export default () => (
         <p>&copy; Chris Miller {format(new Date(), 'YYYY')}</p>
       </div>
       <div className="Footer-col2">
-        <a><MaterialIcon icon="mail" /> E-mail</a>
-        <a><MaterialIcon icon="instagram" /> Instagram</a>
-        <a><MaterialIcon icon="facebook" /> Facebook</a>
+        <a><MaterialIcon icon="mail" style={footerIcon} /> E-mail</a>
+        <a><MaterialIcon icon="instagram" style={footerIcon} /> Instagram</a>
+        <a><MaterialIcon icon="facebook" style={footerIcon} /> Facebook</a>
       </div>
     </div>
 
-    <style jsx>{`
+    <style jsx global>{`
       .Footer {
         padding: 2rem 0;
       }
@@ -41,11 +46,6 @@ export default () => (
       .Footer a {
         transition: .5s ease-in-out;
         cursor: pointer;
-      }
-
-      .Footer i {
-        margin-right: .5rem;
-        padding-left: .1rem;
       }
 
       .Footer a:hover {
