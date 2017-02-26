@@ -1,0 +1,44 @@
+{
+  "name": "cm-web",
+  "version": "1.0.0",
+  "description": "Chris Miller website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "heroku-postbuild": "heroku-nextjs-build"
+  },
+  "engines": {
+    "node": "6.9.x"
+  },
+  "keywords": [
+    "chris",
+    "miller",
+    "front-end",
+    "web",
+    "developer",
+    "portfolio"
+  ],
+  "author": "Chris Miller <chrsmllr@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@mars/heroku-nextjs-build": "^1.1.0",
+    "date-fns": "^1.27.2",
+    "next": "2.0.0-beta.32",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard-react": "^4.2.0",
+    "eslint-plugin-promise": "^3.4.2",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "cacheDirectories": [
+    "nextjs/node_modules"
+  ]
+}
