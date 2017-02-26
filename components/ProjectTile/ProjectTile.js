@@ -29,7 +29,7 @@ export const ProjectTile = ({ imgSrc, projectName, description, projectHref }) =
       }
 
       .ProjectTile-info {
-        padding: 1rem 0;
+        padding: 2rem 0;
       }
 
       .ProjectTile-title {
@@ -57,7 +57,6 @@ export const ProjectTile = ({ imgSrc, projectName, description, projectHref }) =
       .ProjectTile-link:hover i {
         opacity: .4;
       }
-
 
       @media (max-width: 630px) {
         .ProjectTile:nth-child(odd) {

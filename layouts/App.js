@@ -45,7 +45,7 @@ export default () => (
       }
 
       .Projects {
-        padding: 2rem 0;
+        padding: 4rem 0;
         display: flex;
       }
 
