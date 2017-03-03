@@ -14,6 +14,10 @@
   "engines": {
     "node": "6.9.x"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chrismllr/cm-web.git"
+  },
   "keywords": [
     "chris",
     "miller",
@@ -26,10 +30,15 @@
   "license": "ISC",
   "dependencies": {
     "@mars/heroku-nextjs-build": "^1.1.0",
+    "axios": "^0.15.3",
     "date-fns": "^1.27.2",
     "next": "2.0.0-beta.32",
+    "next-redux-wrapper": "^1.0.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "eslint": "^3.16.1",

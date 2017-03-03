@@ -1,0 +1,15 @@
+{
+  "projects": [
+    {
+      "img": "/static/projects/parkhub.png",
+      "name": "Parkhub",
+      "description": "Admin dashboard for mobile parking platform"
+    },
+    {
+      "img": "/static/projects/justin-leveritt.png",
+      "name": "Justin Leveritt",
+      "description": "Photographer: portfolio website",
+      "projectHref": "http://justinleveritt.com"
+    }
+  ]
+}

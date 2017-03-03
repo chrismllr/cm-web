@@ -1,27 +1,25 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ProjectTile from '../components/ProjectTile'
 
-export default () => (
+const App = ({ projectsState }) => (
   <main className="App">
     <Header />
 
     <div className="App-content">
       <div className="container">
         <div className="Projects">
-          <ProjectTile
-            imgSrc="/static/projects/parkhub.png"
-            projectName="Parkhub"
-            description="Admin dashboard for mobile parking platform"
-          />
-
-          <ProjectTile
-            imgSrc="/static/projects/justin-leveritt.png"
-            projectHref="http://justinleveritt.com"
-            projectName="Justin Leveritt"
-            description="Photographer: Portfolio website"
-          />
+          {projectsState.projects.map((p, i) => (
+            <ProjectTile
+              key={i}
+              imgSrc={p.img}
+              projectName={p.name}
+              description={p.description}
+              projectHref={p.projectHref}
+            />
+          ))}
         </div>
       </div>
     </div>
@@ -57,3 +55,13 @@ export default () => (
     `}</style>
   </main>
 )
+
+App.propTypes = {
+  projectsState: React.PropTypes.shape({})
+}
+
+const mapStateToProps = (state) => ({
+  projectsState: state.projects
+})
+
+export default connect(mapStateToProps)(App)
