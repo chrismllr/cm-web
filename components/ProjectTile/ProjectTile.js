@@ -1,11 +1,11 @@
 import React from 'react'
 import MaterialIcon from '../MaterialIcon'
 
-export const ProjectTile = ({ imgSrc, projectName, description, projectHref }) => (
+export const ProjectTile = ({ img, name, description, projectHref, onClick }) => (
   <div className="ProjectTile">
-    <img src={imgSrc} className="ProjectTile-image" alt={projectName} />
+    <img src={img} className="ProjectTile-image" alt={name} onClick={onClick} />
     <div className="ProjectTile-info">
-      <h4 className="ProjectTile-title">{projectName}</h4>
+      <h4 className="ProjectTile-title">{name}</h4>
       <p className="ProjectTile-description">
         {description}
         {projectHref &&
@@ -72,8 +72,9 @@ export const ProjectTile = ({ imgSrc, projectName, description, projectHref }) =
 )
 
 ProjectTile.propTypes = {
-  imgSrc: React.PropTypes.string,
-  projectName: React.PropTypes.string,
+  img: React.PropTypes.string,
+  onClick: React.PropTypes.func,
+  name: React.PropTypes.string,
   description: React.PropTypes.string,
   projectHref: React.PropTypes.string
 }

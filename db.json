@@ -3,13 +3,26 @@
     {
       "img": "/static/projects/parkhub.png",
       "name": "Parkhub",
-      "description": "Admin dashboard for mobile parking platform"
+      "description": "Admin dashboard for mobile parking platform",
+      "technologies": ["Ember.js", "D3/ C3"],
+      "learnings": [
+        "Simplifying UI while representing large amounts of real-time data",
+        "Complex authentication structure",
+        "Numerous heavy CRUD operations",
+        "High traffic driven optimizations"
+      ]
     },
     {
       "img": "/static/projects/justin-leveritt.png",
       "name": "Justin Leveritt",
       "description": "Photographer: portfolio website",
-      "projectHref": "http://justinleveritt.com"
+      "projectHref": "http://justinleveritt.com",
+      "technologies": ["Meteor", "MongoDB"],
+      "learnings": [
+        "Designing a minimal, distraction-free experience to showcase content",
+        "Working with a framework coupled to a server and database (MongoDB)",
+        "Image optimization and ease-of-use for client updates"
+      ]
     }
   ]
 }

@@ -3,8 +3,17 @@ import { connect } from 'react-redux'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ProjectTile from '../components/ProjectTile'
+import Lightbox from '../components/Lightbox'
+import { actions } from '../modules/lightbox.duck'
 
-const App = ({ projectsState }) => (
+function toggleLightbox (dispatch, p) {
+  return function () {
+    dispatch(actions.setLghtboxProject(p))
+    dispatch(actions.toggleLightbox())
+  }
+}
+
+const App = ({ projectsState, dispatch, lightboxState }) => (
   <main className="App">
     <Header />
 
@@ -14,10 +23,8 @@ const App = ({ projectsState }) => (
           {projectsState.projects.map((p, i) => (
             <ProjectTile
               key={i}
-              imgSrc={p.img}
-              projectName={p.name}
-              description={p.description}
-              projectHref={p.projectHref}
+              onClick={toggleLightbox(dispatch, p)}
+              {...p}
             />
           ))}
         </div>
@@ -25,6 +32,10 @@ const App = ({ projectsState }) => (
     </div>
 
     <Footer />
+
+    {lightboxState.isLightbox &&
+      <Lightbox {...lightboxState} close={toggleLightbox(dispatch)} />
+    }
 
     <style jsx>{`
       .App {
@@ -57,11 +68,14 @@ const App = ({ projectsState }) => (
 )
 
 App.propTypes = {
-  projectsState: React.PropTypes.shape({})
+  projectsState: React.PropTypes.shape({}),
+  dispatch: React.PropTypes.func,
+  lightboxState: React.PropTypes.shape({})
 }
 
 const mapStateToProps = (state) => ({
-  projectsState: state.projects
+  projectsState: state.projects,
+  lightboxState: state.lightbox
 })
 
 export default connect(mapStateToProps)(App)
