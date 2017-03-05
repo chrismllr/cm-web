@@ -1,3 +1,11 @@
+function restrictScroll () {
+  document.body.style.overflow = 'hidden'
+}
+
+function enableScroll () {
+  document.body.style.overflow = 'auto'
+}
+
 const initialState = {
   isLightbox: false,
   lightboxProject: {}
@@ -6,10 +14,19 @@ const initialState = {
 const TOGGLE_LIGHTBOX = 'TOGGLE_LIGHTBOX'
 const SET_LIGHTBOX_PROJECT = 'SET_LIGHTBOX_PROJECT'
 
-const toggleLightbox = (val) => ({
-  type: TOGGLE_LIGHTBOX,
-  payload: val
-})
+const toggleLightbox = () => (dispatch, getState) => {
+  const { isLightbox } = getState().lightbox
+
+  if (isLightbox) {
+    enableScroll()
+  } else {
+    restrictScroll()
+  }
+
+  dispatch({
+    type: TOGGLE_LIGHTBOX
+  })
+}
 
 const setLghtboxProject = (p = {}) => ({
   type: SET_LIGHTBOX_PROJECT,

@@ -23,9 +23,14 @@ export const ProjectTile = ({ img, name, description, projectHref, onClick }) =>
 
       .ProjectTile-image {
         width: 100%;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0, 0.14),
-          0 1px 10px 0 rgba(0,0,0, 0.12),
-          0 2px  4px -1px rgba(0,0,0, 0.2);
+        cursor: pointer;
+        box-shadow: 0 4px 5px 0 rgba(0,0,0, 0.1), 0 1px 7px 0 rgba(0,0,0, 0.01), 0 2px 4px -1px rgba(0,0,0, 0.01);
+        transition: .5s ease;
+      }
+
+      .ProjectTile-image:hover {
+        transform: rotate(.5deg) scale(1.02);
+        box-shadow: 0 8px 10px 0 rgba(0,0,0, 0.1), 0 1px 12px 0 rgba(0,0,0, 0.1), 0 6px 10px -1px rgba(0,0,0, 0.1);
       }
 
       .ProjectTile-info {
@@ -63,7 +68,7 @@ export const ProjectTile = ({ img, name, description, projectHref, onClick }) =>
           margin-right: 0;
         }
 
-        .ProjectTile {
+        .ProjectTile:not(:last-child) {
           margin-bottom: 1.5rem;
         }
       }

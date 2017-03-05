@@ -5,16 +5,15 @@ function commaSeparatedString (arr) {
   return arr.reduce((acc, str) => acc.length ? `${acc}, ${str}` : str, '')
 }
 
-function stopPropagation (e) {
-  e.stopPropagation()
-  return false
-}
-
 const Lightbox = (props) => (
-  <div className="Lightbox" onClick={props.close}>
-    <img className="Image" onClick={stopPropagation} src={props.lightboxProject.img} alt={props.lightboxProject.name} />
+  <div className="Lightbox">
+    <a onClick={props.close} className="Back">
+      <span>&larr;</span>
+    </a>
 
-    <div className="Lb-content" onClick={stopPropagation}>
+    <img className="Image" src={props.lightboxProject.img} alt={props.lightboxProject.name} />
+
+    <div className="Lb-content">
       <div className="Col1">
         <h2>
           {props.lightboxProject.name}
@@ -38,13 +37,23 @@ const Lightbox = (props) => (
     </div>
 
     <style jsx>{`
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      @keyframes fadeInDown {
+        0% { opacity: 0; transform: translate3d(0, -50%, 0); }
+        100% { opacity: 1; transform: translate3d(0, 0, 0); }
+      }
+
       .Lightbox {
         position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(255,255,89, .9);
+        background-color: rgba(255,255,107, .98);
         z-index: 100;
         padding: 2rem;
 
@@ -52,12 +61,31 @@ const Lightbox = (props) => (
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        animation: fadeIn;
+        animation-duration: .2s;
+        animation-fill-mode: both;
+      }
+
+      .Back {
+        font-size: 2rem;
+        color: #222;
+        text-decoration: none;
+        opacity: .8;
+        cursor: pointer;
+        margin-bottom: 1rem;
       }
 
       .Image {
         max-height: 65vh;
-        max-width: 80vw;
+        max-width: 90vw;
         box-shadow: rgba(0,0,0,.1) 0 0 50px 15px;
+
+        animation: fadeInDown;
+        animation-fill-mode: both;
+        animation-duration: .5s;
+        animation-timing-function: cubic-bezier(0,1,.51,1);
+        animation-delay: .2s;
       }
 
       .Lb-content {
@@ -69,10 +97,18 @@ const Lightbox = (props) => (
         margin-top: 2rem;
       }
 
+      .Lb-content,
+      .Back {
+        animation: fadeIn;
+        animation-fill-mode: both;
+        animation-duration: .5s;
+        animation-delay: .4s;
+      }
+
       .Learnings {
         font-family: "Arvo", serif;
         display: inline-block;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.33rem;
       }
 
       .Project-link {
@@ -94,7 +130,7 @@ const Lightbox = (props) => (
       }
 
       .Col2 {
-        padding: 1rem 1rem 1rem 3rem;
+        padding: .66rem 1rem 1rem 3rem;
       }
 
       .Col1 h2 {
@@ -116,6 +152,26 @@ const Lightbox = (props) => (
         opacity: .7;
         font-style: italic;
       }
+
+      @media (max-width: 630px) {
+        .Lb-content {
+          flex-direction: column;
+        }
+
+        .Col1, .Col2 {
+          padding: 1rem 0;
+          border: none;
+        }
+
+        .Col1 h2 {
+          font-size: 2rem;
+          margin-bottom: 0;
+        }
+
+        .Learnings {
+          margin-bottom: 1rem;
+        }
+      }
     `}</style>
   </div>
 )
@@ -125,6 +181,7 @@ Lightbox.propTypes = {
   lightboxProject: React.PropTypes.shape({
     img: React.PropTypes.string,
     name: React.PropTypes.string,
+    projectHref: React.PropTypes.string,
     technologies: React.PropTypes.arrayOf(React.PropTypes.string),
     learnings: React.PropTypes.arrayOf(React.PropTypes.string)
   })
