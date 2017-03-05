@@ -58,19 +58,15 @@ const Lightbox = (props) => (
         z-index: 100;
         padding: 2rem;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
         animation: fadeIn;
         animation-duration: .2s;
         animation-fill-mode: both;
       }
 
       .Back {
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: #222;
+        display: block;
         text-decoration: none;
         opacity: .8;
         cursor: pointer;
@@ -79,7 +75,7 @@ const Lightbox = (props) => (
 
       .Image {
         max-height: 65vh;
-        max-width: 90vw;
+        max-width: calc(100vw - 4rem);
         box-shadow: rgba(0,0,0,.1) 0 0 50px 15px;
 
         animation: fadeInDown;
@@ -93,9 +89,7 @@ const Lightbox = (props) => (
         color: rgba(34,34,34, .8);
         letter-spacing: .03rem;
         font-size: .875rem;
-        display: flex;
-        align-items: flex-start;
-        margin: 2rem 0;
+        margin: 1rem 0;
       }
 
       .Lb-content,
@@ -109,7 +103,7 @@ const Lightbox = (props) => (
       .Learnings {
         font-family: "Arvo", serif;
         display: inline-block;
-        margin-bottom: 1.33rem;
+        margin-bottom: 1rem;
       }
 
       .Project-link {
@@ -125,18 +119,14 @@ const Lightbox = (props) => (
         opacity: 1;
       }
 
-      .Col1 {
-        border-right: 1px solid rgba(34,34,34, .1);
-        padding: 0 3rem 1rem 1rem;
-      }
-
-      .Col2 {
-        padding: .66rem 1rem 1rem 3rem;
+      .Col1, .Col2 {
+        padding: 1rem 0;
+        border: none;
       }
 
       .Col1 h2 {
-        font-size: 2.5rem;
-        margin-bottom: .5rem;
+        font-size: 2rem;
+        margin-bottom: 0;
       }
 
       .Col2 ul {
@@ -154,23 +144,40 @@ const Lightbox = (props) => (
         font-style: italic;
       }
 
-      @media (max-width: 630px) {
-        .Lb-content {
+      @media (min-width: 630px) {
+        .Lightbox {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           flex-direction: column;
         }
 
-        .Col1, .Col2 {
-          padding: 1rem 0;
-          border: none;
+        .Back {
+          font-size: 2rem;
         }
 
-        .Col1 h2 {
-          font-size: 2rem;
-          margin-bottom: 0;
+        .Lb-content {
+          display: flex;
+          align-items: flex-start;
+          margin: 2rem 0;
         }
 
         .Learnings {
-          margin-bottom: 1rem;
+          margin-bottom: 1.33rem;
+        }
+
+        .Col1 {
+          padding: 0 3rem 1rem 1rem;
+          border-right: 1px solid rgba(34,34,34, .1);
+        }
+
+        .Col2 {
+          padding: .66rem 1rem 1rem 3rem;
+        }
+
+        .Col1 h2 {
+          font-size: 2.5rem;
+          margin-bottom: .5rem;
         }
       }
     `}</style>

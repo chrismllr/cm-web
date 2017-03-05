@@ -56,12 +56,7 @@ const App = ({ projectsState, dispatch, lightboxState }) => (
       .Projects {
         padding: 4rem 0;
         display: flex;
-      }
-
-      @media (max-width: 630px) {
-        .Projects {
-          flex-wrap: wrap;
-        }
+        flex-wrap: wrap;
       }
     `}</style>
   </main>

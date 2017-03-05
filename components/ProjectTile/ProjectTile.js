@@ -17,8 +17,16 @@ export const ProjectTile = ({ img, name, description, projectHref, onClick }) =>
     </div>
 
     <style jsx>{`
+      .ProjectTile {
+        width: 100%;
+      }
+
       .ProjectTile:nth-child(odd) {
-        margin-right: 1.5rem;
+        margin-right: 0;
+      }
+
+      .ProjectTile:not(:last-child) {
+        margin-bottom: 1.5rem;
       }
 
       .ProjectTile-image {
@@ -63,13 +71,13 @@ export const ProjectTile = ({ img, name, description, projectHref, onClick }) =>
         opacity: .4;
       }
 
-      @media (max-width: 630px) {
-        .ProjectTile:nth-child(odd) {
-          margin-right: 0;
+      @media (min-width: 630px) {
+        .ProjectTile {
+          width: 48%;
         }
 
-        .ProjectTile:not(:last-child) {
-          margin-bottom: 1.5rem;
+        .ProjectTile:nth-child(odd) {
+          margin-right: 1.5rem;
         }
       }
     `}</style>

@@ -11,8 +11,11 @@ export default () => (
   <div className="Footer">
     <div className="container Footer-wrapper">
       <div className="Footer-col1">
+        <h3 className="AnyQuestions">Any questions?</h3>
+        <a href="mailto:chrsmllr@gmail.com">You got my digits.</a>
         <p>&copy; Chris Miller {format(new Date(), 'YYYY')}</p>
       </div>
+
       <div className="Footer-col2">
         <a><MaterialIcon icon="mail" style={footerIcon} /> E-mail</a>
         <a><MaterialIcon icon="instagram" style={footerIcon} /> Instagram</a>
@@ -37,10 +40,20 @@ export default () => (
         margin-right: 1.5rem;
       }
 
+      .Footer-col1 p {
+        margin-top: 2rem;
+      }
+
       .Footer p, .Footer a {
         font-size: .83rem;
         display: block;
         opacity: 0.5;
+      }
+
+      .AnyQuestions {
+        color: #222;
+        margin-bottom: .5rem;
+        line-height: 1.2;
       }
 
       .Footer a {

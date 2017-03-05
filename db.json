@@ -1,19 +1,19 @@
 {
   "projects": [
     {
-      "img": "/static/projects/parkhub.png",
+      "img": "/static/projects/parkhub.jpg",
       "name": "Parkhub",
       "description": "Admin dashboard for mobile parking platform",
       "technologies": ["Ember.js", "D3/ C3"],
       "learnings": [
         "Simplifying UI while representing large amounts of real-time data",
-        "Complex authentication structure",
+        "JWT token-based authentication",
         "Numerous heavy CRUD operations",
         "High traffic driven optimizations"
       ]
     },
     {
-      "img": "/static/projects/justin-leveritt.png",
+      "img": "/static/projects/justin-leveritt.jpg",
       "name": "Justin Leveritt",
       "description": "Photographer: portfolio website",
       "projectHref": "http://justinleveritt.com",
@@ -22,6 +22,17 @@
         "Designing a minimal, distraction-free experience to showcase content",
         "Working with a framework coupled to a server and database (MongoDB)",
         "Image optimization and ease-of-use for client updates"
+      ]
+    },
+    {
+      "img": "/static/projects/flexdrive.jpg",
+      "name": "Flexdrive",
+      "description": "Administrative portal for the Flexdrive platform",
+      "technologies": ["React", "Redux", "Webpack", "React storybook"],
+      "learnings": [
+        "Two unique portals, both consuming webpack build & UI-kit as dependencies",
+        "UI-kit provides reusable components, redux modules, styles, and utils",
+        "Mapbox integration for mapping vehicle's locations"
       ]
     }
   ]
