@@ -3,7 +3,7 @@ const path = require('path')
 const next = require('next')
 
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dir: '.', dev: false })
+const app = next({ dir: '.', dev })
 const handle = app.getRequestHandler()
 
 app.prepare()
