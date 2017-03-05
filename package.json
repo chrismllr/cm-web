@@ -15,10 +15,7 @@
   "engines": {
     "node": "6.9.x"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/chrismllr/cm-web.git"
-  },
+  "repository": "git://github.com/chrismllr/cm-web.git",
   "keywords": [
     "chris",
     "miller",
