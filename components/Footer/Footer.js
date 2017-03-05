@@ -11,9 +11,9 @@ export default () => (
   <div className="Footer">
     <div className="container Footer-wrapper">
       <div className="Footer-col1">
-        <h3 className="AnyQuestions">Any questions?</h3>
-        <a href="mailto:chrsmllr@gmail.com">You got my digits.</a>
-        <p>&copy; Chris Miller {format(new Date(), 'YYYY')}</p>
+        <h3 data-hook="questions" className="AnyQuestions">Any questions?</h3>
+        <a href="mailto:chrsmllr@gmail.com" data-hook="questions-mailto">You got my digits.</a>
+        <p data-hook="copyright">&copy; Chris Miller {format(new Date(), 'YYYY')}</p>
       </div>
 
       <div className="Footer-col2">

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Header Renders to snapshot 1`] = `
+<div
+  className="Header"
+  data-jsx={2917880044}
+>
+  <div
+    className="container"
+    data-jsx={2917880044}
+  >
+    <h1
+      data-jsx={2917880044}
+    >
+      Chris Miller
+    </h1>
+    <h4
+      data-jsx={2917880044}
+    >
+      Web developer
+    </h4>
+  </div>
+</div>
+`;

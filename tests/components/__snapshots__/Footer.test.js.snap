@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Footer Renders to snapshot 1`] = `
+<div
+  className="Footer"
+  data-jsx={3314000957}
+>
+  <div
+    className="container Footer-wrapper"
+    data-jsx={3314000957}
+  >
+    <div
+      className="Footer-col1"
+      data-jsx={3314000957}
+    >
+      <h3
+        className="AnyQuestions"
+        data-hook="questions"
+        data-jsx={3314000957}
+      >
+        Any questions?
+      </h3>
+      <a
+        data-hook="questions-mailto"
+        data-jsx={3314000957}
+        href="mailto:chrsmllr@gmail.com"
+      >
+        You got my digits.
+      </a>
+      <p
+        data-hook="copyright"
+        data-jsx={3314000957}
+      >
+        © Chris Miller 
+        2017
+      </p>
+    </div>
+    <div
+      className="Footer-col2"
+      data-jsx={3314000957}
+    >
+      <a
+        data-jsx={3314000957}
+      >
+        <i
+          className="icon icon-mail"
+          data-jsx={1566661193}
+          style={
+            Object {
+              "marginRight": ".5rem",
+              "paddingLeft": ".1rem",
+            }
+          }
+        />
+         E-mail
+      </a>
+      <a
+        data-jsx={3314000957}
+      >
+        <i
+          className="icon icon-instagram"
+          data-jsx={1566661193}
+          style={
+            Object {
+              "marginRight": ".5rem",
+              "paddingLeft": ".1rem",
+            }
+          }
+        />
+         Instagram
+      </a>
+      <a
+        data-jsx={3314000957}
+      >
+        <i
+          className="icon icon-facebook"
+          data-jsx={1566661193}
+          style={
+            Object {
+              "marginRight": ".5rem",
+              "paddingLeft": ".1rem",
+            }
+          }
+        />
+         Facebook
+      </a>
+    </div>
+  </div>
+</div>
+`;
