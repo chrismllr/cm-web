@@ -1,9 +1,12 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default () => (
   <div className="Header">
     <div className="container">
-      <h2>Chris Miller</h2>
+      <Link prefetch href="/">
+        <h2>Chris Miller</h2>
+      </Link>
       <h5>Web developer</h5>
     </div>
 
