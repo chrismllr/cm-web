@@ -53,6 +53,7 @@ const Lightbox = (props) => (
         bottom: 0;
         left: 0;
         right: 0;
+        overflow-y: auto;
         background-color: rgba(255,255,107, .98);
         z-index: 100;
         padding: 2rem;
