@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next",
+    "dev": "node server",
     "build": "next build",
     "start": "next start -p $PORT",
     "heroku-postbuild": "heroku-nextjs-build",
@@ -32,6 +32,7 @@
     "@mars/heroku-nextjs-build": "^1.1.0",
     "axios": "^0.15.3",
     "date-fns": "^1.27.2",
+    "express": "^4.15.0",
     "next": "2.0.0-beta.32",
     "next-redux-wrapper": "^1.0.0",
     "react": "^15.4.2",

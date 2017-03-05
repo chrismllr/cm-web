@@ -2,6 +2,7 @@ import React from 'react'
 import withRedux from 'next-redux-wrapper'
 import { initStore } from '../store'
 import { actions } from '../modules/projects.duck'
+import '../utils/offline-install'
 
 import HeadContent from './HeadContent'
 import App from '../layouts/App'
