@@ -25,7 +25,5 @@ export default () => (
     <meta name="msapplication-TileColor" content="#f8f8f8" />
     <meta name="msapplication-TileImage" content="static/favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffff6b" />
-
-    <script src='/static/register.js' />
   </Head>
 )
