@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/chrismllr/cm-web.svg?branch=master)](https://travis-ci.org/chrismllr/cm-web)
+
 # CM Web
 
 Portfolio website built using [next.js](https://github.com/zeit/next.js)
