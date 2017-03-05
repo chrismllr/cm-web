@@ -1,0 +1,41 @@
+{
+  "name": "Chris Miller | Web developer",
+  "short_name": "Chris Miller",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f8f8f8",
+  "theme_color": "#ffff6b",
+  "description": "Work and portfolio for developer Chris Miller, Dallas TX",
+  "icons": [{
+    "src": "favicon/android-icon-48x48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "favicon/apple-icon-60x60.png",
+    "sizes": "60x60",
+    "type": "image/png"
+  }, {
+    "src": "favicon/apple-icon-72x72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "favicon/android-icon-96x96.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "favicon/apple-icon-144x144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "favicon/apple-icon-180x180.png",
+    "sizes": "180x180",
+    "type": "image/png"
+  }, {
+    "src": "favicon/android-icon-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "related_applications": [{
+    "platform": "web"
+  }]
+}

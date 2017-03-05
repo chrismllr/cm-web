@@ -9,7 +9,7 @@ export const ProjectTile = ({ img, name, description, projectHref, onClick }) =>
       <p className="ProjectTile-description">
         {description}
         {projectHref &&
-          <a className="ProjectTile-link" href={projectHref} target="_blank">
+          <a className="ProjectTile-link" href={projectHref} target="_blank" rel="noopener">
             <MaterialIcon icon="link" />
           </a>
         }

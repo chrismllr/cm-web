@@ -18,7 +18,7 @@ const Lightbox = (props) => (
         <h2>
           {props.lightboxProject.name}
           {props.lightboxProject.projectHref &&
-          <a className="Project-link" href={props.lightboxProject.projectHref} target="_blank">
+          <a className="Project-link" href={props.lightboxProject.projectHref} target="_blank" rel="noopener">
             <MaterialIcon icon="link" />
           </a>
         }
@@ -95,7 +95,7 @@ const Lightbox = (props) => (
         font-size: .875rem;
         display: flex;
         align-items: flex-start;
-        margin-top: 2rem;
+        margin: 2rem 0;
       }
 
       .Lb-content,

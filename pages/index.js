@@ -1,9 +1,10 @@
 import React from 'react'
-import Head from 'next/head'
-import App from '../layouts/App'
 import withRedux from 'next-redux-wrapper'
 import { initStore } from '../store'
 import { actions } from '../modules/projects.duck'
+
+import HeadContent from './HeadContent'
+import App from '../layouts/App'
 
 class CoreLayout extends React.Component {
   static getInitialProps ({ store, isServer }) {
@@ -13,13 +14,7 @@ class CoreLayout extends React.Component {
   render () {
     return (
       <div>
-        <Head>
-          <title>Chris Miller | Web developer</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <link href="https://fonts.googleapis.com/css?family=Jaldi:400,700|Arvo:400,700|Material+Icons" rel="stylesheet" />
-          <link rel="shortcut icon" href="/static/favicon.png" />
-        </Head>
-
+        <HeadContent />
         <App />
 
         <style jsx global>{`
