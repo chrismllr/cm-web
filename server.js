@@ -7,7 +7,7 @@ const app = next({ dir: '.', dev })
 const handle = app.getRequestHandler()
 
 function ensureSecure (req, res, next) {
-  if (req.secure) {
+  if (req.headers['x-forwarded-proto'] === 'https') {
     // OK, continue
     return next()
   };
