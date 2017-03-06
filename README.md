@@ -5,7 +5,7 @@
 Portfolio website built using [next.js](https://github.com/zeit/next.js)
 
 ### Tidbits
-This application utilizes a service worker, web manifest, and has full offline capabilities. It scores a 94/100 in the Lighthouse PWA tester! Ain't that fancy. Check out the link below in the [Future state](#future-state) section.
+This application utilizes a service worker, web manifest, and has full offline capabilities. It scores a 98/100 in the Lighthouse PWA tester! Ain't that fancy. Check out the link below in the [Future state](#future-state) section.
 
 ## Development
 ```
