@@ -3,19 +3,19 @@
 exports[`(Component) Header Renders to snapshot 1`] = `
 <div
   className="Header"
-  data-jsx={2917880044}
+  data-jsx={2819036016}
 >
   <div
     className="container"
-    data-jsx={2917880044}
+    data-jsx={2819036016}
   >
     <h1
-      data-jsx={2917880044}
+      data-jsx={2819036016}
     >
       Chris Miller
     </h1>
     <h4
-      data-jsx={2917880044}
+      data-jsx={2819036016}
     >
       Web developer
     </h4>
