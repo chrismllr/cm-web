@@ -3,33 +3,33 @@
 exports[`(Component) Footer Renders to snapshot 1`] = `
 <div
   className="Footer"
-  data-jsx={3314000957}
+  data-jsx={3962869051}
 >
   <div
     className="container Footer-wrapper"
-    data-jsx={3314000957}
+    data-jsx={3962869051}
   >
     <div
       className="Footer-col1"
-      data-jsx={3314000957}
+      data-jsx={3962869051}
     >
       <h3
         className="AnyQuestions"
         data-hook="questions"
-        data-jsx={3314000957}
+        data-jsx={3962869051}
       >
         Any questions?
       </h3>
       <a
         data-hook="questions-mailto"
-        data-jsx={3314000957}
+        data-jsx={3962869051}
         href="mailto:chrsmllr@gmail.com"
       >
         You got my digits.
       </a>
       <p
         data-hook="copyright"
-        data-jsx={3314000957}
+        data-jsx={3962869051}
       >
         © Chris Miller 
         2017
@@ -37,10 +37,10 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
     </div>
     <div
       className="Footer-col2"
-      data-jsx={3314000957}
+      data-jsx={3962869051}
     >
       <a
-        data-jsx={3314000957}
+        data-jsx={3962869051}
       >
         <i
           className="icon icon-mail"
@@ -55,7 +55,7 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
          E-mail
       </a>
       <a
-        data-jsx={3314000957}
+        data-jsx={3962869051}
       >
         <i
           className="icon icon-instagram"
@@ -70,7 +70,7 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
          Instagram
       </a>
       <a
-        data-jsx={3314000957}
+        data-jsx={3962869051}
       >
         <i
           className="icon icon-facebook"

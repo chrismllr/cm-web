@@ -16,6 +16,12 @@ export default () => (
         opacity: 0.5;
         letter-spacing: .03rem;
       }
+
+      @media (min-width: 630px) {
+        .Header {
+          padding: 4rem 0;
+        }
+      }
     `}</style>
   </div>
 )
