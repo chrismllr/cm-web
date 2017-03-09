@@ -11,7 +11,7 @@ export default () => (
       </div>
 
       <div className="Footer-col2">
-        <a className="Footer-dim" href="http://github.com/chrismllr" target="_blank" rel="noopener">
+        <a className="Footer-dim" href="http://github.com/chrismllr" target="_blank" rel="noopener" data-hook="github">
           <span className="Arrow">></span> github
         </a>
         <a className="Footer-dim" href="mailto:chrsmllr@gmail.com">

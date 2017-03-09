@@ -24,8 +24,9 @@ describe('(Component) Footer', () => {
     expect(wrapper.find(hook('copyright')).text()).toEqual(`© Chris Miller ${format(new Date(), 'YYYY')}`)
   })
 
-  it('Renders three MaterialIcon`s for social links', () => {
-    expect(wrapper.find('MaterialIcon').length).toEqual(3)
+  it('Renders link to github', () => {
+    expect(wrapper.find(hook('github')).exists()).toBeTruthy()
+    expect(wrapper.find(hook('github')).props().href).toEqual('http://github.com/chrismllr')
   })
 
   it('Renders to snapshot', () => {
