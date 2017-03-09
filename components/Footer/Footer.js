@@ -1,29 +1,26 @@
 import React from 'react'
-import MaterialIcon from '../MaterialIcon'
 import format from 'date-fns/format'
-
-const footerIcon = {
-  marginRight: '.5rem',
-  paddingLeft: '.1rem'
-}
 
 export default () => (
   <div className="Footer">
     <div className="container Footer-wrapper">
       <div className="Footer-col1">
         <h3 data-hook="questions" className="AnyQuestions">Any questions?</h3>
-        <a href="mailto:chrsmllr@gmail.com" data-hook="questions-mailto">You got my digits.</a>
-        <p data-hook="copyright">&copy; Chris Miller {format(new Date(), 'YYYY')}</p>
+        <a className="Digits-link" href="mailto:chrsmllr@gmail.com" data-hook="questions-mailto">You got my digits.</a>
+        <p className="Footer-dim" data-hook="copyright">&copy; Chris Miller {format(new Date(), 'YYYY')}</p>
       </div>
 
       <div className="Footer-col2">
-        <a><MaterialIcon icon="mail" style={footerIcon} /> E-mail</a>
-        <a><MaterialIcon icon="instagram" style={footerIcon} /> Instagram</a>
-        <a><MaterialIcon icon="facebook" style={footerIcon} /> Facebook</a>
+        <a className="Footer-dim" href="http://github.com/chrismllr" target="_blank" rel="noopener">
+          <span className="Arrow">></span> github
+        </a>
+        <a className="Footer-dim" href="mailto:chrsmllr@gmail.com">
+          <span className="Arrow">></span> e-mail
+        </a>
       </div>
     </div>
 
-    <style jsx global>{`
+    <style jsx>{`
       .Footer {
         padding: 2rem 0;
       }
@@ -44,11 +41,30 @@ export default () => (
         margin-top: 2rem;
       }
 
-      .Footer p, .Footer a {
+      .Footer-dim {
         font-size: .83rem;
         display: block;
-        opacity: 0.5;
+        letter-spacing: .01rem;
+        color: #6b6b6b;
+        text-decoration: none;
       }
+
+      .Digits-link {
+        font-size: .83rem;
+        display: block;
+        letter-spacing: .01rem;
+        color: #FB0101;
+        text-decoration: underline;
+      }
+
+      .Arrow {
+        color: #222;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1;
+        margin-right: .2rem;
+      }
+
 
       .AnyQuestions {
         color: #222;
