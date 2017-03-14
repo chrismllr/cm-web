@@ -1,6 +1,7 @@
 {
   "projects": [
     {
+      "id": 1,
       "img": "/static/projects/parkhub.jpg",
       "name": "Parkhub",
       "description": "Admin dashboard for mobile parking platform",
@@ -13,6 +14,7 @@
       ]
     },
     {
+      "id": 2,
       "img": "/static/projects/justin-leveritt.jpg",
       "name": "Justin Leveritt",
       "description": "Photographer: portfolio website",
@@ -25,6 +27,7 @@
       ]
     },
     {
+      "id": 3,
       "img": "/static/projects/flexdrive.jpg",
       "name": "Flexdrive",
       "description": "Administrative portal for the Flexdrive platform",

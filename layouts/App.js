@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ProjectTile from '../components/ProjectTile'
 import Lightbox from '../components/Lightbox'
+import { Container } from '../components/Containers'
 import { actions } from '../modules/lightbox.duck'
 
 function toggleLightbox (dispatch, p) {
@@ -13,22 +14,24 @@ function toggleLightbox (dispatch, p) {
   }
 }
 
-const App = ({ projectsState, dispatch, lightboxState }) => (
+const App = ({ entities: { projects }, dispatch, lightboxState }) => (
   <main className="App">
     <Header />
 
+    {console.log(projects)}
+
     <div className="App-content">
-      <div className="container">
+      <Container>
         <div className="Projects">
-          {projectsState.projects.map((p, i) => (
+          {Object.keys(projects).map((id, i) => (
             <ProjectTile
               key={i}
-              onClick={toggleLightbox(dispatch, p)}
-              {...p}
+              onClick={toggleLightbox(dispatch, projects[id])}
+              {...projects[id]}
             />
           ))}
         </div>
-      </div>
+      </Container>
     </div>
 
     <Footer />
@@ -63,13 +66,15 @@ const App = ({ projectsState, dispatch, lightboxState }) => (
 )
 
 App.propTypes = {
-  projectsState: React.PropTypes.shape({}),
+  entities: React.PropTypes.shape({
+    projects: React.PropTypes.shape({})
+  }),
   dispatch: React.PropTypes.func,
   lightboxState: React.PropTypes.shape({})
 }
 
 const mapStateToProps = (state) => ({
-  projectsState: state.projects,
+  entities: state.entities,
   lightboxState: state.lightbox
 })
 

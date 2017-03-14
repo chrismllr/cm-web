@@ -6,6 +6,8 @@ function enableScroll () {
   document.body.style.overflow = 'auto'
 }
 
+export const STATE_KEY = 'lightbox'
+
 const initialState = {
   isLightbox: false,
   lightboxProject: {}

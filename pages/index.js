@@ -1,7 +1,7 @@
 import React from 'react'
 import withRedux from 'next-redux-wrapper'
 import { initStore } from '../store'
-import { actions } from '../modules/projects.duck'
+import { actions } from '../modules/entities.duck'
 import '../utils/offline-install'
 
 import HeadContent from './HeadContent'
@@ -30,7 +30,7 @@ class CoreLayout extends React.Component {
             -webkit-font-smoothing: subpixel-antialiased;
           }
 
-          html, body, .container {
+          html, body {
             width: 100%;
             height: auto;
             margin: 0;
@@ -54,13 +54,6 @@ class CoreLayout extends React.Component {
             font-weight: 400;
             margin: 0;
             letter-spacing: .02rem;
-          }
-
-          .container {
-            position: relative;
-            max-width: 60rem;
-            margin: 0 auto;
-            padding: 0 1.5rem;
           }
         `}</style>
       </div>

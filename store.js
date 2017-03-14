@@ -1,11 +1,14 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import thunkMiddleware from 'redux-thunk'
-import projects from './modules/projects.duck'
-import lightbox from './modules/lightbox.duck'
+import entities, { STATE_KEY as ENTITIES_KEY } from './modules/entities.duck'
+import lightbox, { STATE_KEY as LIGHTBOX_KEY } from './modules/lightbox.duck'
 
 export function initStore (initialState) {
   return createStore(
-    combineReducers({ projects, lightbox }),
+    combineReducers({
+      [ENTITIES_KEY]: entities,
+      [LIGHTBOX_KEY]: lightbox
+    }),
     initialState,
     applyMiddleware(thunkMiddleware)
   )
