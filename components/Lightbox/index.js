@@ -1,24 +1,11 @@
-// @flow
-
 import React from 'react'
 import MaterialIcon from '../MaterialIcon'
 
-function commaSeparatedString (arr: string[]): string {
+function commaSeparatedString (arr) {
   return arr.reduce((acc, str) => acc.length ? `${acc}, ${str}` : str, '')
 }
 
-type LightboxProps = {
-  close: function,
-  lightboxProject: {
-    img: string,
-    name: string,
-    projectHref: string,
-    technologies: string[],
-    learnings: string[]
-  }
-}
-
-const Lightbox = (props: LightboxProps) => (
+const Lightbox = (props) => (
   <div className="Lightbox">
     <a onClick={props.close} className="Back">
       <span>&larr;</span>

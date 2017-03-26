@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
-import Footer from '../../components/Footer'
-import { hook } from '../test-utils'
+import Footer from '../Footer'
+import { hook } from '../../utils/test-utils'
 import format from 'date-fns/format'
 
 describe('(Component) Footer', () => {

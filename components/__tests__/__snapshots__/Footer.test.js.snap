@@ -6,8 +6,7 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
   data-jsx={4220951982}
 >
   <div
-    className="container Footer-wrapper"
-    data-jsx={4220951982}
+    className="lehlJS"
   >
     <div
       className="Footer-col1"

@@ -2,5 +2,12 @@
   "extends": ["standard", "standard-react"],
   "rules": {
     "jsx-quotes": [1, "prefer-double"]
+  },
+  "globals": {
+    "describe": false,
+    "it": false,
+    "expect": false,
+    "beforeEach": false,
+    "afterEach": false
   }
 }

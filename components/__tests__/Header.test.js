@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
-import Header from '../../components/Header'
+import Header from '../Header'
 
 describe('(Component) Header', () => {
   it('Renders title and subtitle of page', () => {
