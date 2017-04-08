@@ -18,8 +18,6 @@ const App = ({ entities: { projects }, dispatch, lightboxState }) => (
   <main className="App">
     <Header />
 
-    {console.log(projects)}
-
     <div className="App-content">
       <Container>
         <div className="Projects">
@@ -58,8 +56,14 @@ const App = ({ entities: { projects }, dispatch, lightboxState }) => (
 
       .Projects {
         padding: 4rem 0;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
       }
     `}</style>
   </main>
