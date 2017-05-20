@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import withRedux from 'next-redux-wrapper'
 import { initStore } from '../store'
 import { actions } from '../modules/entities.duck'
@@ -62,7 +63,7 @@ class CoreLayout extends React.Component {
 }
 
 CoreLayout.propTypes = {
-  dispatch: React.PropTypes.func
+  dispatch: PropTypes.func
 }
 
 export default withRedux(initStore)(CoreLayout)

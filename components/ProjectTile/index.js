@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import MaterialIcon from '../MaterialIcon'
 
 export const ProjectTile = ({ img, name, description, projectHref, onClick }) => (
@@ -63,11 +64,11 @@ export const ProjectTile = ({ img, name, description, projectHref, onClick }) =>
 )
 
 ProjectTile.propTypes = {
-  img: React.PropTypes.string,
-  onClick: React.PropTypes.func,
-  name: React.PropTypes.string,
-  description: React.PropTypes.string,
-  projectHref: React.PropTypes.string
+  img: PropTypes.string,
+  onClick: PropTypes.func,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  projectHref: PropTypes.string
 }
 
 export default ProjectTile

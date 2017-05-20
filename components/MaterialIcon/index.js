@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const MaterialIcon = ({ icon, style }) => (
   <i className={`icon icon-${icon}`} style={style}>
@@ -44,8 +45,8 @@ const MaterialIcon = ({ icon, style }) => (
 )
 
 MaterialIcon.propTypes = {
-  icon: React.PropTypes.string,
-  style: React.PropTypes.shape({})
+  icon: PropTypes.string,
+  style: PropTypes.shape({})
 }
 
 export default MaterialIcon

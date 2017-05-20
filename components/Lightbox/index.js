@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import MaterialIcon from '../MaterialIcon'
 
 function commaSeparatedString (arr) {
@@ -185,13 +186,13 @@ const Lightbox = (props) => (
 )
 
 Lightbox.propTypes = {
-  close: React.PropTypes.func,
-  lightboxProject: React.PropTypes.shape({
-    img: React.PropTypes.string,
-    name: React.PropTypes.string,
-    projectHref: React.PropTypes.string,
-    technologies: React.PropTypes.arrayOf(React.PropTypes.string),
-    learnings: React.PropTypes.arrayOf(React.PropTypes.string)
+  close: PropTypes.func,
+  lightboxProject: PropTypes.shape({
+    img: PropTypes.string,
+    name: PropTypes.string,
+    projectHref: PropTypes.string,
+    technologies: PropTypes.arrayOf(PropTypes.string),
+    learnings: PropTypes.arrayOf(PropTypes.string)
   })
 }
 

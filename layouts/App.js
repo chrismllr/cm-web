@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -70,11 +71,11 @@ const App = ({ entities: { projects }, dispatch, lightboxState }) => (
 )
 
 App.propTypes = {
-  entities: React.PropTypes.shape({
-    projects: React.PropTypes.shape({})
+  entities: PropTypes.shape({
+    projects: PropTypes.shape({})
   }),
-  dispatch: React.PropTypes.func,
-  lightboxState: React.PropTypes.shape({})
+  dispatch: PropTypes.func,
+  lightboxState: PropTypes.shape({})
 }
 
 const mapStateToProps = (state) => ({
