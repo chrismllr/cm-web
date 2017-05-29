@@ -1,6 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import MaterialIcon from '../MaterialIcon'
+
+const OutsideLink = styled.a.attrs({
+  target: '_blank',
+  rel: 'noopener'
+})`
+  color: #FB0101;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  text-decoration: none;
+  margin-left: .33rem;
+
+  &:hover {
+    opacity: .4;
+  }
+`
 
 export const ProjectTile = ({ img, name, description, projectHref, onClick }) => (
   <div className="ProjectTile">
@@ -10,9 +26,9 @@ export const ProjectTile = ({ img, name, description, projectHref, onClick }) =>
       <p className="ProjectTile-description">
         {description}
         {projectHref &&
-          <a className="ProjectTile-link" href={projectHref} target="_blank" rel="noopener">
+          <OutsideLink href={projectHref}>
             <MaterialIcon icon="link" />
-          </a>
+          </OutsideLink>
         }
       </p>
     </div>
@@ -43,21 +59,6 @@ export const ProjectTile = ({ img, name, description, projectHref, onClick }) =>
       .ProjectTile-description {
         opacity: .5;
         font-size: .83rem;
-      }
-
-      .ProjectTile-link {
-        text-decoration: none;
-        margin-left: .33rem;
-      }
-
-      .ProjectTile-link {
-        color: #FB0101;
-        cursor: pointer;
-        transition: .5s ease-in-out;
-      }
-
-      .ProjectTile-link:hover {
-        opacity: .4;
       }
     `}</style>
   </div>

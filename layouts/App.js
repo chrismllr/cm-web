@@ -4,9 +4,10 @@ import { connect } from 'react-redux'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ProjectTile from '../components/ProjectTile'
-import Lightbox from '../components/Lightbox'
 import { Container } from '../components/Containers'
+import AsyncComponent from '../hoc/AsyncComponent'
 import { actions } from '../modules/lightbox.duck'
+import dynamic from 'next/dynamic'
 
 function toggleLightbox (dispatch, p) {
   return function () {
@@ -15,60 +16,73 @@ function toggleLightbox (dispatch, p) {
   }
 }
 
-const App = ({ entities: { projects }, dispatch, lightboxState }) => (
-  <main className="App">
-    <Header />
+function lightboxLoader () {
+  return import('../components/Lightbox');
+}
 
-    <div className="App-content">
-      <Container>
-        <div className="Projects">
-          {Object.keys(projects).map((id, i) => (
-            <ProjectTile
-              key={i}
-              onClick={toggleLightbox(dispatch, projects[id])}
-              {...projects[id]}
-            />
-          ))}
-        </div>
-      </Container>
-    </div>
+function LightboxAsync (props) {
+  return <AsyncComponent {...props} loader={lightboxLoader} />
+}
 
-    <Footer />
+function App ({ entities: { projects }, dispatch, lightboxState }) {
+  return (
+    <main className="App">
+      <Header />
 
-    {lightboxState.isLightbox &&
-      <Lightbox {...lightboxState} close={toggleLightbox(dispatch)} />
-    }
+      <div className="App-content">
+        <Container>
+          <div className="Projects">
+            {Object.keys(projects).map((id, i) => (
+              <ProjectTile
+                key={i}
+                onClick={toggleLightbox(dispatch, projects[id])}
+                {...projects[id]}
+              />
+            ))}
+          </div>
+        </Container>
+      </div>
 
-    <style jsx>{`
-      .App {
-        min-width: 100%;
-        color: #222;
-        font-weight: 400;
-        overflow-x: hidden;
+      <Footer />
+
+      {lightboxState.isLightbox &&
+        <LightboxAsync
+          {...lightboxState}
+          close={toggleLightbox(dispatch)}
+        />
       }
 
-      .App-content {
-        height: 100%;
-        width: 100%;
-        min-width: 100%;
-        overflow-x: hidden;
-        background-image: linear-gradient(270deg, #f0f0f0, #f8f8f8);
-      }
+      <style jsx>{`
+        .App {
+          min-width: 100%;
+          color: #222;
+          font-weight: 400;
+          overflow-x: hidden;
+        }
 
-      .Projects {
-        padding: 4rem 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 1.5rem;
-        grid-row-gap: 1rem;
-      }
+        .App-content {
+          height: 100%;
+          width: 100%;
+          min-width: 100%;
+          overflow-x: hidden;
+          background-image: linear-gradient(270deg, #f0f0f0, #f8f8f8);
+        }
 
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-    `}</style>
-  </main>
-)
+        .Projects {
+          padding: 4rem 0;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 1.5rem;
+          grid-row-gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+      `}</style>
+    </main>
+  );
+}
 
 App.propTypes = {
   entities: PropTypes.shape({

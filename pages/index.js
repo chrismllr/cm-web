@@ -5,7 +5,6 @@ import { initStore } from '../store'
 import { actions } from '../modules/entities.duck'
 import '../utils/offline-install'
 
-import HeadContent from './HeadContent'
 import App from '../layouts/App'
 
 class CoreLayout extends React.Component {
@@ -16,7 +15,6 @@ class CoreLayout extends React.Component {
   render () {
     return (
       <div>
-        <HeadContent />
         <App />
 
         <style jsx global>{`
