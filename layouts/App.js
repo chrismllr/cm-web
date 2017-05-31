@@ -7,7 +7,6 @@ import ProjectTile from '../components/ProjectTile'
 import { Container } from '../components/Containers'
 import AsyncComponent from '../hoc/AsyncComponent'
 import { actions } from '../modules/lightbox.duck'
-import dynamic from 'next/dynamic'
 
 function toggleLightbox (dispatch, p) {
   return function () {
@@ -17,7 +16,7 @@ function toggleLightbox (dispatch, p) {
 }
 
 function lightboxLoader () {
-  return import('../components/Lightbox');
+  return import('../components/Lightbox')
 }
 
 function LightboxAsync (props) {
@@ -81,7 +80,7 @@ function App ({ entities: { projects }, dispatch, lightboxState }) {
         }
       `}</style>
     </main>
-  );
+  )
 }
 
 App.propTypes = {

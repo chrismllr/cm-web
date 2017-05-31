@@ -7,9 +7,11 @@
       "presets": ["next/babel"]
     },
     "test": {
-      // next/babel does not transpile import/export syntax.
-      // So, using es2015 in the beginning will fix that.
-      "presets": ["es2015", "next/babel"]
+      "presets": [
+        ["env", { "modules": "commonjs" }],
+        "next/babel"
+      ],
+      "plugins": ["transform-es2015-modules-commonjs", "syntax-dynamic-import"]
     }
   }
 }
