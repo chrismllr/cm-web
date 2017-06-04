@@ -10,7 +10,6 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>My page</title>
           <title>Chris Miller | Web developer</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link href="https://fonts.googleapis.com/css?family=Jaldi:400,700|Arvo:400,700|Material+Icons" rel="stylesheet" />
