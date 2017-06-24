@@ -2,26 +2,26 @@
 
 exports[`(Component) Footer Renders to snapshot 1`] = `
 <section
-  className="Footer sc-htpNat ODLsm"
+  className="Footer sc-EHOje DwaPY"
 >
   <div
-    className="sc-bwzfXH dPwPgu sc-bdVaJa TWYiO"
+    className="sc-ifAKCX iBDHIg sc-bxivhb cWKZZq"
   >
     <div
       className="Footer-col1"
-      data-jsx={2777949936}
+      data-jsx={1068436732}
     >
       <h3
         className="AnyQuestions"
         data-hook="questions"
-        data-jsx={2777949936}
+        data-jsx={1068436732}
       >
         Any questions?
       </h3>
       <a
         className="Digits-link"
         data-hook="questions-mailto"
-        data-jsx={2777949936}
+        data-jsx={1068436732}
         href="mailto:chrsmllr@gmail.com"
       >
         You got my digits.
@@ -29,7 +29,7 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
       <p
         className="Footer-dim"
         data-hook="copyright"
-        data-jsx={2777949936}
+        data-jsx={1068436732}
       >
         © Chris Miller 
         2017
@@ -37,32 +37,32 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
     </div>
     <div
       className="Footer-col2"
-      data-jsx={2777949936}
+      data-jsx={1068436732}
     >
       <a
-        className="Footer-dim"
+        className="sc-htpNat ifCQge sc-bdVaJa gtmQnx"
         data-hook="github"
-        data-jsx={2777949936}
         href="http://github.com/chrismllr"
         rel="noopener"
         target="_blank"
       >
         <span
           className="Arrow"
-          data-jsx={2777949936}
+          data-jsx={1068436732}
         >
           &gt;
         </span>
          github
       </a>
       <a
-        className="Footer-dim"
-        data-jsx={2777949936}
+        className="sc-htpNat ifCQge sc-bdVaJa gtmQnx"
         href="mailto:chrsmllr@gmail.com"
+        rel="noopener"
+        target="_blank"
       >
         <span
           className="Arrow"
-          data-jsx={2777949936}
+          data-jsx={1068436732}
         >
           &gt;
         </span>
