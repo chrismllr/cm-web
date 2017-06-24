@@ -2,16 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Header from '../components/Header'
+import Projects from '../components/Projects'
 import Footer from '../components/Footer'
-import ProjectTile from '../components/ProjectTile'
-import { Container } from '../components/Containers'
+import { Container, Section } from '../components/Layout'
+import withKeyCmds from '../hoc/with-key-commands'
 import AsyncComponent from '../hoc/AsyncComponent'
 import { actions } from '../modules/lightbox.duck'
 
-function toggleLightbox (dispatch, p) {
-  return function () {
-    dispatch(actions.setLghtboxProject(p))
-    dispatch(actions.toggleLightbox())
+function toggleLightbox (dispatch, p, value) {
+  return function toggle () {
+    if (p) dispatch(actions.setLghtboxProject(p))
+    dispatch(actions.toggleLightbox(value))
   }
 }
 
@@ -23,64 +24,68 @@ function LightboxAsync (props) {
   return <AsyncComponent {...props} loader={lightboxLoader} />
 }
 
-function App ({ entities: { projects }, dispatch, lightboxState }) {
-  return (
-    <main className="App">
-      <Header />
+class App extends React.Component {
+  componentDidMount () {
+    const { addKeyCommand, dispatch } = this.props
 
-      <div className="App-content">
-        <Container>
-          <div className="Projects">
-            {Object.keys(projects).map((id, i) => (
-              <ProjectTile
-                key={i}
-                onClick={toggleLightbox(dispatch, projects[id])}
-                {...projects[id]}
-              />
-            ))}
-          </div>
-        </Container>
-      </div>
+    addKeyCommand(27, toggleLightbox(dispatch, undefined, false))
+  }
 
-      <Footer />
+  render () {
+    const {
+      entities: { projects },
+      dispatch,
+      lightboxState
+    } = this.props
 
-      {lightboxState.isLightbox &&
-        <LightboxAsync
-          {...lightboxState}
-          close={toggleLightbox(dispatch)}
+    return (
+      <main className="App">
+        <Header />
+
+        <Section>
+          <Container>
+            <p className="Bio">
+              Hello! My name is Chris, and I'm a web developer and UI engineer. I specialize in building efficient and forward-thinking technological solutions for the browser. I currently work at <span className="bold-it">Dialexa</span>, right here in beautiful Dallas, Texas.
+            </p>
+          </Container>
+        </Section>
+
+        <Projects
+          projects={projects}
+          toggleLightbox={(p) => toggleLightbox(dispatch, p, true)}
         />
-      }
 
-      <style jsx>{`
-        .App {
-          min-width: 100%;
-          color: #222;
-          font-weight: 400;
-          overflow-x: hidden;
+        <Footer />
+
+        {lightboxState.isLightbox &&
+          <LightboxAsync
+            {...lightboxState}
+            close={toggleLightbox(dispatch, undefined, false)}
+          />
         }
 
-        .App-content {
-          height: 100%;
-          width: 100%;
-          min-width: 100%;
-          overflow-x: hidden;
-          background-image: linear-gradient(270deg, #f0f0f0, #f8f8f8);
-        }
+        <style jsx>{`
+          .App {
+            min-width: 100%;
+            color: #222;
+            font-weight: 400;
+            overflow-x: hidden;
+          }
 
-        .Projects {
-          padding: 4rem 0;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-column-gap: 1.5rem;
-          grid-row-gap: 1rem;
-        }
+          .Bio {
+            max-width: 40rem;
+            font-size: 1.875rem;
+            color: #4a4a4a;
+          }
 
-        @media (max-width: 768px) {
-          grid-template-columns: 1fr;
-        }
-      `}</style>
-    </main>
-  )
+          .bold-it {
+            font-weight: 900;
+            color: #222;
+          }
+        `}</style>
+      </main>
+    )
+  }
 }
 
 App.propTypes = {
@@ -88,7 +93,8 @@ App.propTypes = {
     projects: PropTypes.shape({})
   }),
   dispatch: PropTypes.func,
-  lightboxState: PropTypes.shape({})
+  lightboxState: PropTypes.shape({}),
+  addKeyCommand: PropTypes.func
 }
 
 const mapStateToProps = (state) => ({
@@ -96,4 +102,4 @@ const mapStateToProps = (state) => ({
   lightboxState: state.lightbox
 })
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps)(withKeyCmds(App))

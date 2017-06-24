@@ -38,7 +38,7 @@ class CoreLayout extends React.Component {
           body {
             line-height: 1.5;
             overflow-x: hidden;
-            background-color: #fcfcfc;
+            background-color: #fff;
             font-family: "Jaldi", sans-serif;
           }
 

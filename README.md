@@ -19,6 +19,13 @@ npm run lint
 ```
 Runs `eslint` on `components/`, `layouts/`, `pages/` directories
 
+## Tests
+Tests are written using Jest and Jest snapshots.
+```
+npm run test
+npm run test:dev // runs with watch
+```
+
 ## Deployment
 Deployed to heroku, pushes to `master` will trigger a deployment. Alternatively, you can `git push heroku master` to trigger a manual build using the `heroku-nextjs-build` build pack.
 - [Heroku Nextjs Build](https://github.com/mars/heroku-nextjs)
