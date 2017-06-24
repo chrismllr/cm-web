@@ -1,5 +1,6 @@
 import React from 'react'
 import format from 'date-fns/format'
+import { FooterLink } from '../Links'
 import { FlexContainer, Section } from '../Layout'
 
 export default () => (
@@ -12,12 +13,12 @@ export default () => (
       </div>
 
       <div className="Footer-col2">
-        <a className="Footer-dim" href="http://github.com/chrismllr" target="_blank" rel="noopener" data-hook="github">
+        <FooterLink href="http://github.com/chrismllr" data-hook="github">
           <span className="Arrow">></span> github
-        </a>
-        <a className="Footer-dim" href="mailto:chrsmllr@gmail.com">
+        </FooterLink>
+        <FooterLink href="mailto:chrsmllr@gmail.com">
           <span className="Arrow">></span> e-mail
-        </a>
+        </FooterLink>
       </div>
     </FlexContainer>
 
@@ -36,13 +37,6 @@ export default () => (
 
       .Footer-col1 p {
         margin-top: 2rem;
-      }
-
-      .Footer-dim {
-        display: block;
-        letter-spacing: .01rem;
-        color: #6b6b6b;
-        text-decoration: none;
       }
 
       .Digits-link {
