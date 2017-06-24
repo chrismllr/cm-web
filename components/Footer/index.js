@@ -1,9 +1,9 @@
 import React from 'react'
 import format from 'date-fns/format'
-import { FlexContainer } from '../Containers'
+import { FlexContainer, Section } from '../Layout'
 
 export default () => (
-  <div className="Footer">
+  <Section className="Footer">
     <FlexContainer>
       <div className="Footer-col1">
         <h3 data-hook="questions" className="AnyQuestions">Any questions?</h3>
@@ -22,12 +22,8 @@ export default () => (
     </FlexContainer>
 
     <style jsx>{`
-      .Footer {
-        padding: 2rem 0;
-      }
-
-      .Footer-wrapper {
-        display: flex;
+      section {
+        background-color: #f8f8f8;
       }
 
       .Footer-col1, .Footer-col2 {
@@ -88,5 +84,5 @@ export default () => (
         }
       }
     `}</style>
-  </div>
+  </Section>
 )

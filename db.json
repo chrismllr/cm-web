@@ -5,6 +5,7 @@
       "img": "/static/projects/parkhub.jpg",
       "name": "Parkhub",
       "description": "Admin dashboard for mobile parking platform",
+      "company": "Dialexa",
       "technologies": ["Ember.js", "D3/ C3"],
       "learnings": [
         "Simplifying UI while representing large amounts of real-time data",
@@ -18,6 +19,7 @@
       "img": "/static/projects/justin-leveritt.jpg",
       "name": "Justin Leveritt",
       "description": "Photographer: portfolio website",
+      "company": "Freelance",
       "projectHref": "http://justinleveritt.com",
       "technologies": ["Meteor", "MongoDB"],
       "learnings": [
@@ -31,6 +33,7 @@
       "img": "/static/projects/flexdrive.jpg",
       "name": "Flexdrive",
       "description": "Administrative portal for the Flexdrive platform",
+      "company": "Dialexa",
       "technologies": ["React", "Redux", "Webpack", "React storybook"],
       "learnings": [
         "Two unique portals, both consuming webpack build & UI-kit as dependencies",

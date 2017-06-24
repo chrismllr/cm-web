@@ -16,17 +16,16 @@ const initialState = {
 const TOGGLE_LIGHTBOX = 'TOGGLE_LIGHTBOX'
 const SET_LIGHTBOX_PROJECT = 'SET_LIGHTBOX_PROJECT'
 
-const toggleLightbox = () => (dispatch, getState) => {
-  const { isLightbox } = getState().lightbox
-
-  if (isLightbox) {
+const toggleLightbox = (newVal) => (dispatch) => {
+  if (!newVal) {
     enableScroll()
   } else {
     restrictScroll()
   }
 
   dispatch({
-    type: TOGGLE_LIGHTBOX
+    type: TOGGLE_LIGHTBOX,
+    payload: newVal
   })
 }
 
@@ -48,10 +47,10 @@ const ACTION_HANDLERS = {
     }
   },
 
-  [TOGGLE_LIGHTBOX] (state) {
+  [TOGGLE_LIGHTBOX] (state, action) {
     return {
       ...state,
-      isLightbox: !state.isLightbox
+      isLightbox: action.payload
     }
   }
 }
