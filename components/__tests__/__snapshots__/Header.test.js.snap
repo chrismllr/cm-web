@@ -1,23 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`(Component) Header Renders to snapshot 1`] = `
-<div
-  className="Header"
-  data-jsx={2819036016}
+<section
+  className="sc-htpNat dyUswa"
 >
   <div
-    className="sc-bdVaJa gaHYho"
+    className="sc-bwzfXH fAShlV sc-bdVaJa hiLGRf"
   >
     <h1
-      data-jsx={2819036016}
+      data-jsx={1650768255}
     >
       Chris Miller
     </h1>
     <h4
-      data-jsx={2819036016}
+      data-jsx={1650768255}
     >
-      Web developer
+      UI Engineer
     </h4>
   </div>
-</div>
+</section>
 `;

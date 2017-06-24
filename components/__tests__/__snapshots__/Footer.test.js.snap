@@ -1,28 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`(Component) Footer Renders to snapshot 1`] = `
-<div
-  className="Footer"
-  data-jsx={4220951982}
+<section
+  className="Footer sc-htpNat dyUswa"
 >
   <div
-    className="sc-bwzfXH jIEWCi sc-bdVaJa gaHYho"
+    className="sc-bwzfXH jDdpJq sc-bdVaJa hiLGRf"
   >
     <div
       className="Footer-col1"
-      data-jsx={4220951982}
+      data-jsx={828263289}
     >
       <h3
         className="AnyQuestions"
         data-hook="questions"
-        data-jsx={4220951982}
+        data-jsx={828263289}
       >
         Any questions?
       </h3>
       <a
         className="Digits-link"
         data-hook="questions-mailto"
-        data-jsx={4220951982}
+        data-jsx={828263289}
         href="mailto:chrsmllr@gmail.com"
       >
         You got my digits.
@@ -30,7 +29,7 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
       <p
         className="Footer-dim"
         data-hook="copyright"
-        data-jsx={4220951982}
+        data-jsx={828263289}
       >
         © Chris Miller 
         2017
@@ -38,19 +37,19 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
     </div>
     <div
       className="Footer-col2"
-      data-jsx={4220951982}
+      data-jsx={828263289}
     >
       <a
         className="Footer-dim"
         data-hook="github"
-        data-jsx={4220951982}
+        data-jsx={828263289}
         href="http://github.com/chrismllr"
         rel="noopener"
         target="_blank"
       >
         <span
           className="Arrow"
-          data-jsx={4220951982}
+          data-jsx={828263289}
         >
           &gt;
         </span>
@@ -58,12 +57,12 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
       </a>
       <a
         className="Footer-dim"
-        data-jsx={4220951982}
+        data-jsx={828263289}
         href="mailto:chrsmllr@gmail.com"
       >
         <span
           className="Arrow"
-          data-jsx={4220951982}
+          data-jsx={828263289}
         >
           &gt;
         </span>
@@ -71,5 +70,5 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
       </a>
     </div>
   </div>
-</div>
+</section>
 `;
