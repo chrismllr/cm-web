@@ -9,19 +9,19 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
   >
     <div
       className="Footer-col1"
-      data-jsx={828263289}
+      data-jsx={2777949936}
     >
       <h3
         className="AnyQuestions"
         data-hook="questions"
-        data-jsx={828263289}
+        data-jsx={2777949936}
       >
         Any questions?
       </h3>
       <a
         className="Digits-link"
         data-hook="questions-mailto"
-        data-jsx={828263289}
+        data-jsx={2777949936}
         href="mailto:chrsmllr@gmail.com"
       >
         You got my digits.
@@ -29,7 +29,7 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
       <p
         className="Footer-dim"
         data-hook="copyright"
-        data-jsx={828263289}
+        data-jsx={2777949936}
       >
         © Chris Miller 
         2017
@@ -37,19 +37,19 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
     </div>
     <div
       className="Footer-col2"
-      data-jsx={828263289}
+      data-jsx={2777949936}
     >
       <a
         className="Footer-dim"
         data-hook="github"
-        data-jsx={828263289}
+        data-jsx={2777949936}
         href="http://github.com/chrismllr"
         rel="noopener"
         target="_blank"
       >
         <span
           className="Arrow"
-          data-jsx={828263289}
+          data-jsx={2777949936}
         >
           &gt;
         </span>
@@ -57,12 +57,12 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
       </a>
       <a
         className="Footer-dim"
-        data-jsx={828263289}
+        data-jsx={2777949936}
         href="mailto:chrsmllr@gmail.com"
       >
         <span
           className="Arrow"
-          data-jsx={828263289}
+          data-jsx={2777949936}
         >
           &gt;
         </span>

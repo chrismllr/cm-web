@@ -5,15 +5,15 @@ exports[`(Component) Header Renders to snapshot 1`] = `
   className="sc-htpNat ODLsm"
 >
   <div
-    className="Header sc-bwzfXH ilCxFm sc-bdVaJa TWYiO"
+    className="sc-bxivhb jFbhRm sc-bwzfXH ilCxFm sc-bdVaJa TWYiO"
   >
     <h1
-      data-jsx={3980846260}
+      data-jsx={980965940}
     >
       Chris Miller
     </h1>
     <h4
-      data-jsx={3980846260}
+      data-jsx={980965940}
     >
       Web Developer
     </h4>
