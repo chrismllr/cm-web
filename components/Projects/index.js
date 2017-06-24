@@ -10,7 +10,8 @@ const propTypes = {
 
 const ProjectsSection = styled(Section)`
   position: relative;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   @media screen and (min-width: 768px) {
     min-height: 500px;
@@ -24,6 +25,7 @@ const ProjectImg = styled.img.attrs({
   cursor: pointer;
   width: 100%;
   max-width: 400px;
+  margin-bottom: 3rem;
   text-align: center;
 
   @media screen and (min-width: 768px) {
@@ -35,9 +37,9 @@ const ProjectImg = styled.img.attrs({
     top: 30%;
     position: absolute;
     box-shadow: rgba(0,0,0,.1) 0 0 30px 2px;
+    transition: .8s ease;
     transform: rotate(10deg)
       translate3d(-50%, 0, 0);
-    transition: .8s ease;
 
     &:nth-child(1) {
       z-index: 1;

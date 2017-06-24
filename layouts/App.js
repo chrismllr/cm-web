@@ -73,9 +73,13 @@ class App extends React.Component {
           }
 
           .Bio {
-            max-width: 40rem;
-            font-size: 1.875rem;
             color: #4a4a4a;
+            font-size: 24px;
+
+            @media screen and (min-width: 768px) {
+              max-width: 40rem;
+              font-size: 1.875rem;
+            }
           }
 
           .bold-it {
