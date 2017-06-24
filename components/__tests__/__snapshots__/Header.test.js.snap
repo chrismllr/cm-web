@@ -2,18 +2,18 @@
 
 exports[`(Component) Header Renders to snapshot 1`] = `
 <section
-  className="sc-htpNat dyUswa"
+  className="sc-htpNat ODLsm"
 >
   <div
-    className="sc-bwzfXH fAShlV sc-bdVaJa hiLGRf"
+    className="Header sc-bwzfXH ilCxFm sc-bdVaJa TWYiO"
   >
     <h1
-      data-jsx={1650768255}
+      data-jsx={3980846260}
     >
       Chris Miller
     </h1>
     <h4
-      data-jsx={1650768255}
+      data-jsx={3980846260}
     >
       UI Engineer
     </h4>
