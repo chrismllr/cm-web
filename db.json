@@ -40,6 +40,6 @@
         "UI-kit provides reusable components, redux modules, styles, and utils",
         "Mapbox integration for mapping vehicle's locations"
       ]
-    },
+    }
   ]
 }

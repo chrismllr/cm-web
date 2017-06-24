@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { connect } from 'react-redux'
 import Header from '../components/Header'
 import Projects from '../components/Projects'
@@ -24,6 +25,20 @@ function LightboxAsync (props) {
   return <AsyncComponent {...props} loader={lightboxLoader} />
 }
 
+const OutsideLink = styled.a.attrs({
+  rel: 'noopener',
+  target: '_blank'
+})`
+  font-weight: 900;
+  color: #4a4a4a;
+  transition: .3s ease;
+
+  &:hover {
+    color: #D6B064;
+    text-shadow: #222 3px 3px 0;
+  }
+`
+
 class App extends React.Component {
   componentDidMount () {
     const { addKeyCommand, dispatch } = this.props
@@ -45,7 +60,7 @@ class App extends React.Component {
         <Section>
           <Container>
             <p className="Bio">
-              Hello! My name is Chris, and I'm a web developer and UI engineer. I specialize in building efficient and forward-thinking technological solutions for the browser. I currently work at <span className="bold-it">Dialexa</span>, right here in beautiful Dallas, Texas.
+              Hello! My name is Chris, and I'm a web developer and UI engineer. I specialize in building efficient and forward-thinking technological solutions for the browser. I currently work at <OutsideLink href="http://dialexa.com">Dialexa</OutsideLink>, right here in beautiful Dallas, Texas.
             </p>
           </Container>
         </Section>
@@ -75,16 +90,13 @@ class App extends React.Component {
           .Bio {
             color: #4a4a4a;
             font-size: 24px;
+          }
 
-            @media screen and (min-width: 768px) {
+          @media screen and (min-width: 768px) {
+            .Bio {
               max-width: 40rem;
               font-size: 1.875rem;
             }
-          }
-
-          .bold-it {
-            font-weight: 900;
-            color: #222;
           }
         `}</style>
       </main>

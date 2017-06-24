@@ -39,7 +39,6 @@ export default () => (
       }
 
       .Footer-dim {
-        font-size: .83rem;
         display: block;
         letter-spacing: .01rem;
         color: #6b6b6b;
@@ -47,7 +46,6 @@ export default () => (
       }
 
       .Digits-link {
-        font-size: .83rem;
         display: block;
         letter-spacing: .01rem;
         color: #FB0101;
@@ -57,7 +55,7 @@ export default () => (
       .Arrow {
         color: #222;
         font-weight: 700;
-        font-size: 1rem;
+        font-size: 1.25rem;
         line-height: 1;
         margin-right: .2rem;
       }
