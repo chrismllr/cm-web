@@ -10,7 +10,7 @@ describe('(Component) Header', () => {
     )
 
     expect(wrapper.find('h1').text()).toEqual('Chris Miller')
-    expect(wrapper.find('h4').text()).toEqual('UI Engineer')
+    expect(wrapper.find('h4').text()).toEqual('Web Developer')
   })
 
   it('Renders to snapshot', () => {

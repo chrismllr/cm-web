@@ -10,7 +10,7 @@ export default () => (
       alignItems="flex-start"
     >
       <h1>Chris Miller</h1>
-      <h4>UI Engineer</h4>
+      <h4>Web Developer</h4>
 
     </FlexContainer>
 
