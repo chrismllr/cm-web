@@ -1,21 +1,7 @@
 {
   "projects": [
     {
-      "id": 1,
-      "img": "/static/projects/parkhub.jpg",
-      "name": "Parkhub",
-      "description": "Admin dashboard for mobile parking platform",
-      "company": "Dialexa",
-      "technologies": ["Ember.js", "D3/ C3"],
-      "learnings": [
-        "Simplifying UI while representing large amounts of real-time data",
-        "JWT token-based authentication",
-        "Numerous heavy CRUD operations",
-        "High traffic driven optimizations"
-      ]
-    },
-    {
-      "id": 2,
+      "id": "1",
       "img": "/static/projects/justin-leveritt.jpg",
       "name": "Justin Leveritt",
       "description": "Photographer: portfolio website",
@@ -29,7 +15,21 @@
       ]
     },
     {
-      "id": 3,
+      "id": "2",
+      "img": "/static/projects/parkhub.jpg",
+      "name": "Parkhub",
+      "description": "Admin dashboard for mobile parking platform",
+      "company": "Dialexa",
+      "technologies": ["Ember.js", "D3/ C3"],
+      "learnings": [
+        "Simplifying UI while representing large amounts of real-time data",
+        "JWT token-based authentication",
+        "Numerous heavy CRUD operations",
+        "High traffic driven optimizations"
+      ]
+    },
+    {
+      "id": "3",
       "img": "/static/projects/flexdrive.jpg",
       "name": "Flexdrive",
       "description": "Administrative portal for the Flexdrive platform",
@@ -40,6 +40,6 @@
         "UI-kit provides reusable components, redux modules, styles, and utils",
         "Mapbox integration for mapping vehicle's locations"
       ]
-    }
+    },
   ]
 }
