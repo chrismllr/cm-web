@@ -9,7 +9,7 @@ function commaSeparatedString (arr) {
 function Lightbox (props) {
   return (
     <div className="Lightbox">
-      <a onClick={props.close} className="Back">
+      <a data-hook="close" onClick={props.close} className="Back">
         <span>&larr;</span>
       </a>
 
@@ -20,7 +20,13 @@ function Lightbox (props) {
           <h2>
             {props.lightboxProject.name}
             {props.lightboxProject.projectHref &&
-            <a className="Project-link" href={props.lightboxProject.projectHref} target="_blank" rel="noopener">
+            <a
+              className="Project-link"
+              href={props.lightboxProject.projectHref}
+              target="_blank"
+              rel="noopener"
+              data-hook="project-link"
+            >
               <MaterialIcon icon="link" />
             </a>
           }

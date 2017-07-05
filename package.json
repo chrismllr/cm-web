@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "NODE_ENV=production node server",
     "heroku-postbuild": "heroku-nextjs-build",
-    "lint": "eslint components layouts pages tests"
+    "lint": "eslint components layouts pages tests",
+    "generate": "DEBUG=Generator node bin/make.js"
   },
   "engines": {
     "node": "6.9.x"
@@ -46,6 +47,7 @@
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
+    "debug": "^2.6.8",
     "enzyme": "^2.7.1",
     "eslint": "^3.16.1",
     "eslint-config-standard": "^6.2.1",

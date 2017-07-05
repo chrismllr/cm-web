@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Lightbox Renders to snapshot 1`] = `
+<div
+  className="Lightbox"
+  data-jsx={2839711473}
+>
+  <a
+    className="Back"
+    data-hook="close"
+    data-jsx={2839711473}
+    onClick={[Function]}
+  >
+    <span
+      data-jsx={2839711473}
+    >
+      ←
+    </span>
+  </a>
+  <img
+    alt="JLeveritt"
+    className="Image"
+    data-jsx={2839711473}
+    src="img.jpg"
+  />
+  <div
+    className="Lb-content"
+    data-jsx={2839711473}
+  >
+    <div
+      className="Col1"
+      data-jsx={2839711473}
+    >
+      <h2
+        data-jsx={2839711473}
+      >
+        JLeveritt
+        <a
+          className="Project-link"
+          data-hook="project-link"
+          data-jsx={2839711473}
+          href="www.project.com"
+          rel="noopener"
+          target="_blank"
+        >
+          <i
+            className="icon icon-link"
+            data-jsx={1566661193}
+            style={undefined}
+          />
+        </a>
+      </h2>
+      <p
+        className="Company"
+        data-jsx={2839711473}
+      >
+        Personal
+      </p>
+      <p
+        className="Sub"
+        data-jsx={2839711473}
+      >
+        React
+      </p>
+    </div>
+    <div
+      className="Col2"
+      data-jsx={2839711473}
+    >
+      <span
+        className="Learnings"
+        data-jsx={2839711473}
+      >
+        Learnings:
+      </span>
+      <ul
+        data-jsx={2839711473}
+      >
+        <li
+          data-jsx={2839711473}
+        >
+          Did cool stuff
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

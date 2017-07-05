@@ -30,6 +30,11 @@ npm run test:dev // runs with watch
 Deployed to heroku, pushes to `master` will trigger a deployment. Alternatively, you can `git push heroku master` to trigger a manual build using the `heroku-nextjs-build` build pack.
 - [Heroku Nextjs Build](https://github.com/mars/heroku-nextjs)
 
+## Generate a component and its test file
+```
+npm run generate component CoolComponent
+```
+
 ## Future state
 :white_check_mark: Implement Service worker
 - https://github.com/ooade/NextSimpleStarter
