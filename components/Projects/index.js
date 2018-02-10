@@ -22,10 +22,11 @@ const ProjectImg = styled.img.attrs({
 })`
   cursor: pointer;
   max-width: 400px;
+  width: 100%;
   margin-bottom: 3rem;
   text-align: center;
   transform: rotate(1deg);
-  box-shadow: rgba(0,0,0,.15) 0 0 20px 2px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px 2px;
   border-radius: 6px;
 
   &:nth-child(even) {
@@ -34,7 +35,8 @@ const ProjectImg = styled.img.attrs({
 
   @media screen and (min-width: 768px) {
     margin-right: 2rem;
-    transition: .8s ease;
+    transition: 0.8s ease;
+    width: auto;
     max-width: calc(50% - 2rem);
 
     &:nth-child(n + 2) {
@@ -43,7 +45,7 @@ const ProjectImg = styled.img.attrs({
   }
 `
 
-function Projects (props) {
+function Projects(props) {
   return (
     <ProjectsSection>
       <Container>
