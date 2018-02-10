@@ -8,15 +8,6 @@ const propTypes = {
   toggleLightbox: PropTypes.func
 }
 
-const ProjectsSection = styled(Section)`
-  position: relative;
-
-  @media screen and (min-width: 768px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-`
-
 const ProjectImg = styled.img.attrs({
   role: 'button'
 })`
@@ -47,7 +38,7 @@ const ProjectImg = styled.img.attrs({
 
 function Projects(props) {
   return (
-    <ProjectsSection>
+    <Section>
       <Container>
         {Object.keys(props.projects).map((id, k) => (
           <ProjectImg
@@ -57,7 +48,7 @@ function Projects(props) {
           />
         ))}
       </Container>
-    </ProjectsSection>
+    </Section>
   )
 }
 

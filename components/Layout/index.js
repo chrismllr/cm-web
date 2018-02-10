@@ -6,10 +6,13 @@ export const Container = styled.div`
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
+  padding-left: calc(2rem + env(safe-area-inset-left));
+  padding-right: calc(2rem + env(safe-area-inset-right));
 
   @media screen and (min-width: 768px) {
-    padding: 0 3rem;
+    padding-left: calc(3rem + env(safe-area-inset-left));
+    padding-right: calc(3rem + env(safe-area-inset-right));
   }
 `
 

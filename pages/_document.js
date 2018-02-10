@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
           <title>Chris Miller | Web Developer</title>
           <meta
             name="viewport"
-            content="initial-scale=1.0, width=device-width"
+            content="initial-scale=1.0, width=device-width, viewport-fit=cover"
           />
           <meta
             name="description"
