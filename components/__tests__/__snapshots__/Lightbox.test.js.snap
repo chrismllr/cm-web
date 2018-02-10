@@ -3,16 +3,16 @@
 exports[`(Component) Lightbox Renders to snapshot 1`] = `
 <div
   className="Lightbox"
-  data-jsx={2839711473}
+  data-jsx={4265853809}
 >
   <a
     className="Back"
     data-hook="close"
-    data-jsx={2839711473}
+    data-jsx={4265853809}
     onClick={[Function]}
   >
     <span
-      data-jsx={2839711473}
+      data-jsx={4265853809}
     >
       ←
     </span>
@@ -20,25 +20,25 @@ exports[`(Component) Lightbox Renders to snapshot 1`] = `
   <img
     alt="JLeveritt"
     className="Image"
-    data-jsx={2839711473}
+    data-jsx={4265853809}
     src="img.jpg"
   />
   <div
     className="Lb-content"
-    data-jsx={2839711473}
+    data-jsx={4265853809}
   >
     <div
       className="Col1"
-      data-jsx={2839711473}
+      data-jsx={4265853809}
     >
       <h2
-        data-jsx={2839711473}
+        data-jsx={4265853809}
       >
         JLeveritt
         <a
           className="Project-link"
           data-hook="project-link"
-          data-jsx={2839711473}
+          data-jsx={4265853809}
           href="www.project.com"
           rel="noopener"
           target="_blank"
@@ -52,32 +52,32 @@ exports[`(Component) Lightbox Renders to snapshot 1`] = `
       </h2>
       <p
         className="Company"
-        data-jsx={2839711473}
+        data-jsx={4265853809}
       >
         Personal
       </p>
       <p
         className="Sub"
-        data-jsx={2839711473}
+        data-jsx={4265853809}
       >
         React
       </p>
     </div>
     <div
       className="Col2"
-      data-jsx={2839711473}
+      data-jsx={4265853809}
     >
       <span
         className="Learnings"
-        data-jsx={2839711473}
+        data-jsx={4265853809}
       >
         Learnings:
       </span>
       <ul
-        data-jsx={2839711473}
+        data-jsx={4265853809}
       >
         <li
-          data-jsx={2839711473}
+          data-jsx={4265853809}
         >
           Did cool stuff
         </li>

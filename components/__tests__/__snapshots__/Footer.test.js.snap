@@ -5,7 +5,7 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
   className="Footer sc-EHOje DwaPY"
 >
   <div
-    className="sc-ifAKCX iBDHIg sc-bxivhb cWKZZq"
+    className="sc-ifAKCX iBDHIg sc-bxivhb gBIlHg"
   >
     <div
       className="Footer-col1"
