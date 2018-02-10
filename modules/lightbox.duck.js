@@ -1,8 +1,8 @@
-function restrictScroll () {
+function restrictScroll() {
   document.body.style.overflow = 'hidden'
 }
 
-function enableScroll () {
+function enableScroll() {
   document.body.style.overflow = 'auto'
 }
 
@@ -16,7 +16,7 @@ const initialState = {
 const TOGGLE_LIGHTBOX = 'TOGGLE_LIGHTBOX'
 const SET_LIGHTBOX_PROJECT = 'SET_LIGHTBOX_PROJECT'
 
-const toggleLightbox = (newVal) => (dispatch) => {
+const toggleLightbox = newVal => dispatch => {
   if (!newVal) {
     enableScroll()
   } else {
@@ -40,14 +40,14 @@ export const actions = {
 }
 
 const ACTION_HANDLERS = {
-  [SET_LIGHTBOX_PROJECT] (state, action) {
+  [SET_LIGHTBOX_PROJECT](state, action) {
     return {
       ...state,
       lightboxProject: action.payload
     }
   },
 
-  [TOGGLE_LIGHTBOX] (state, action) {
+  [TOGGLE_LIGHTBOX](state, action) {
     return {
       ...state,
       isLightbox: action.payload
@@ -55,7 +55,7 @@ const ACTION_HANDLERS = {
   }
 }
 
-export default function lightboxReducer (state = initialState, action) {
+export default function lightboxReducer(state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
 
   return handler ? handler(state, action) : state

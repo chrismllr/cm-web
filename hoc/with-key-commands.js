@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function withKeyCmds (WrappedComponent) {
-  function addToFns (fn) {
-    return function update (state) {
+export default function withKeyCmds(WrappedComponent) {
+  function addToFns(fn) {
+    return function update(state) {
       return {
         fns: [...state.fns, fn]
       }
@@ -12,10 +12,10 @@ export default function withKeyCmds (WrappedComponent) {
   return class KeyCommands extends React.Component {
     state = {
       fns: []
-    };
+    }
 
     addKeyCommand = (key, fn) => {
-      const handleKeyUp = (e) => {
+      const handleKeyUp = e => {
         if (e.keyCode === key) {
           fn()
         }
@@ -25,16 +25,13 @@ export default function withKeyCmds (WrappedComponent) {
       window.addEventListener('keyup', handleKeyUp, false)
     }
 
-    componentWillUnmount () {
-      this.state.fns.map((fn) => window.removeEventListener('keyup', fn, false))
+    componentWillUnmount() {
+      this.state.fns.map(fn => window.removeEventListener('keyup', fn, false))
     }
 
-    render () {
+    render() {
       return (
-        <WrappedComponent
-          {...this.props}
-          addKeyCommand={this.addKeyCommand}
-        />
+        <WrappedComponent {...this.props} addKeyCommand={this.addKeyCommand} />
       )
     }
   }

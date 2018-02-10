@@ -1,3 +1,3 @@
-export function hook (identifier) {
+export function hook(identifier) {
   return '[data-hook="' + identifier + '"]'
 }

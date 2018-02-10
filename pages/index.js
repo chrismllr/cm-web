@@ -8,11 +8,11 @@ import '../utils/offline-install'
 import App from '../layouts/App'
 
 class CoreLayout extends React.Component {
-  static getInitialProps ({ store, isServer }) {
+  static getInitialProps({ store, isServer }) {
     store.dispatch(actions.getProjects())
   }
 
-  render () {
+  render() {
     return (
       <div>
         <App />
@@ -29,7 +29,8 @@ class CoreLayout extends React.Component {
             -webkit-font-smoothing: subpixel-antialiased;
           }
 
-          html, body {
+          html,
+          body {
             width: 100%;
             height: auto;
             margin: 0;
@@ -39,20 +40,25 @@ class CoreLayout extends React.Component {
             line-height: 1.5;
             overflow-x: hidden;
             background-color: #fff;
-            font-family: "Jaldi", sans-serif;
+            font-family: 'Jaldi', sans-serif;
           }
 
-          h1, h2, h3 {
-            font-family: "Arvo", serif;
+          h1,
+          h2,
+          h3 {
+            font-family: 'Arvo', serif;
             margin: 0;
-            letter-spacing: .01rem;
+            letter-spacing: 0.01rem;
             font-weight: 900;
           }
 
-          h4, h5, h6, p {
+          h4,
+          h5,
+          h6,
+          p {
             font-weight: 400;
             margin: 0;
-            letter-spacing: .02rem;
+            letter-spacing: 0.02rem;
           }
         `}</style>
       </div>

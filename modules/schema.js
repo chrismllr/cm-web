@@ -5,8 +5,8 @@ const learning = new schema.Entity('learnings')
 const technology = new schema.Entity('technologies')
 
 project.define({
-  technologies: [ technology ],
-  learnings: [ learning ]
+  technologies: [technology],
+  learnings: [learning]
 })
 
 export const projectList = new schema.Array(project)

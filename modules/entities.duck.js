@@ -13,7 +13,7 @@ const ADD_ENTITIES = 'ADD_ENTITIES'
 // Can probably change this to `addEntities`,
 // bring `getProjects` into a separate Projects duck
 // and only manage the actual state of entities here
-const getProjects = () => (dispatch) => {
+const getProjects = () => dispatch => {
   const data = normalize(projects, schema.projectList)
 
   dispatch({
@@ -27,7 +27,7 @@ export const actions = {
 }
 
 const ACTION_HANDLERS = {
-  [ADD_ENTITIES] (entities, action) {
+  [ADD_ENTITIES](entities, action) {
     return {
       ...entities,
       ...action.payload
@@ -35,7 +35,7 @@ const ACTION_HANDLERS = {
   }
 }
 
-export default function entitiesReducer (state = initialState, action) {
+export default function entitiesReducer(state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
 
   return handler ? handler(state, action) : state

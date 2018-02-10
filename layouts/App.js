@@ -10,34 +10,30 @@ import withKeyCmds from '../hoc/with-key-commands'
 import AsyncComponent from '../hoc/AsyncComponent'
 import { actions } from '../modules/lightbox.duck'
 
-function toggleLightbox (dispatch, p, value) {
-  return function toggle () {
+function toggleLightbox(dispatch, p, value) {
+  return function toggle() {
     if (p) dispatch(actions.setLghtboxProject(p))
     dispatch(actions.toggleLightbox(value))
   }
 }
 
-function lightboxLoader () {
+function lightboxLoader() {
   return import('../components/Lightbox')
 }
 
-function LightboxAsync (props) {
+function LightboxAsync(props) {
   return <AsyncComponent {...props} loader={lightboxLoader} />
 }
 
 class App extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     const { addKeyCommand, dispatch } = this.props
 
     addKeyCommand(27, toggleLightbox(dispatch, undefined, false))
   }
 
-  render () {
-    const {
-      entities: { projects },
-      dispatch,
-      lightboxState
-    } = this.props
+  render() {
+    const { entities: { projects }, dispatch, lightboxState } = this.props
 
     return (
       <main className="App">
@@ -47,28 +43,31 @@ class App extends React.Component {
           <Container>
             <p className="Bio">
               Hello! My name is Chris, and I'm a web developer and UI engineer.
-              I specialize in building efficient and forward-thinking technological solutions for all devices.
+              I specialize in building efficient and forward-thinking
+              technological solutions for all devices.
             </p>
             <br />
             <p className="Bio">
-              I currently work at <DialexaLink href="http://dialexa.com">Dialexa</DialexaLink>, right here in beautiful Dallas, Texas.
+              I currently work at{' '}
+              <DialexaLink href="http://dialexa.com">Dialexa</DialexaLink>,
+              right here in beautiful Dallas, Texas.
             </p>
           </Container>
         </Section>
 
         <Projects
           projects={projects}
-          toggleLightbox={(p) => toggleLightbox(dispatch, p, true)()}
+          toggleLightbox={p => toggleLightbox(dispatch, p, true)()}
         />
 
         <Footer />
 
-        {lightboxState.isLightbox &&
+        {lightboxState.isLightbox && (
           <LightboxAsync
             {...lightboxState}
             close={toggleLightbox(dispatch, undefined, false)}
           />
-        }
+        )}
 
         <style jsx>{`
           .App {
@@ -105,7 +104,7 @@ App.propTypes = {
   addKeyCommand: PropTypes.func
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   entities: state.entities,
   lightboxState: state.lightbox
 })
