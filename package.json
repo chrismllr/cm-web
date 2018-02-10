@@ -13,9 +13,6 @@
     "lint": "eslint components layouts pages tests",
     "generate": "DEBUG=Generator node bin/make.js"
   },
-  "engines": {
-    "node": "6.9.x"
-  },
   "repository": "git://github.com/chrismllr/cm-web.git",
   "keywords": [
     "chris",
