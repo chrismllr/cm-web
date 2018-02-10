@@ -47,7 +47,10 @@ class App extends React.Component {
           <Container>
             <p className="Bio">
               Hello! My name is Chris, and I'm a web developer and UI engineer.
-              I specialize in building efficient and forward-thinking technological solutions for the browser.
+              I specialize in building efficient and forward-thinking technological solutions for all devices.
+            </p>
+            <br />
+            <p className="Bio">
               I currently work at <DialexaLink href="http://dialexa.com">Dialexa</DialexaLink>, right here in beautiful Dallas, Texas.
             </p>
           </Container>
@@ -55,7 +58,7 @@ class App extends React.Component {
 
         <Projects
           projects={projects}
-          toggleLightbox={(p) => toggleLightbox(dispatch, p, true)}
+          toggleLightbox={(p) => toggleLightbox(dispatch, p, true)()}
         />
 
         <Footer />
