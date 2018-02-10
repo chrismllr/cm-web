@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/chrismllr/cm-web.svg?branch=master)](https://travis-ci.org/chrismllr/cm-web)
 
-# CM Web
+# CM Portfolio
 
 Portfolio website built using [next.js](https://github.com/zeit/next.js)
 
@@ -8,22 +8,28 @@ Portfolio website built using [next.js](https://github.com/zeit/next.js)
 This application utilizes a service worker, web manifest, and has full offline capabilities. It scores a 98/100 in the Lighthouse PWA tester! Ain't that fancy. Check out the link below in the [Future state](#future-state) section.
 
 ## Development
-```
-npm run dev
+```bash
+yarn dev
 ```
 Visit `http://localhost:3000/`
 
 ## Linting
-```
-npm run lint
+```bash
+yarn lint
 ```
 Runs `eslint` on `components/`, `layouts/`, `pages/` directories
+
+## Prettier
+```bash
+yarn prettier
+```
+Runs `prettier` formatter on `.js` files in project
 
 ## Tests
 Tests are written using Jest and Jest snapshots.
 ```
-npm run test
-npm run test:dev // runs with watch
+yarn test
+yarn test:dev // runs with watch
 ```
 
 ## Deployment
@@ -31,10 +37,11 @@ Deployed to heroku, pushes to `master` will trigger a deployment. Alternatively,
 - [Heroku Nextjs Build](https://github.com/mars/heroku-nextjs)
 
 ## Generate a component and its test file
-```
-npm run generate component CoolComponent
+```bash
+yarn generate component CoolComponent
 ```
 
-## Future state
+## Feature additions
 :white_check_mark: Implement Service worker
 - https://github.com/ooade/NextSimpleStarter
+:white_check_mark: Add precommit hook to run prettier
