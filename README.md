@@ -42,6 +42,5 @@ yarn generate component CoolComponent
 ```
 
 ## Feature additions
-:white_check_mark: Implement Service worker
-- https://github.com/ooade/NextSimpleStarter
-:white_check_mark: Add precommit hook to run prettier
+- :white_check_mark: Implement Service worker using [NextSimpleStarter](https://github.com/ooade/NextSimpleStarter)
+- :white_check_mark: Add precommit hook to run prettier
