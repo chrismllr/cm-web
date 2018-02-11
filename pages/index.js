@@ -6,6 +6,7 @@ import { actions } from '../modules/entities.duck'
 import '../utils/offline-install'
 
 import App from '../layouts/App'
+import { fonts } from '../styles/common'
 
 class CoreLayout extends React.Component {
   static getInitialProps({ store, isServer }) {
@@ -40,13 +41,13 @@ class CoreLayout extends React.Component {
             line-height: 1.5;
             overflow-x: hidden;
             background-color: #fff;
-            font-family: 'Jaldi', sans-serif;
+            font-family: ${fonts.SECONDARY};
           }
 
           h1,
           h2,
           h3 {
-            font-family: 'Arvo', serif;
+            font-family: ${fonts.PRIMARY};
             margin: 0;
             letter-spacing: 0.01rem;
             font-weight: 900;

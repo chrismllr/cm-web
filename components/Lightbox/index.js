@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import MaterialIcon from '../MaterialIcon'
+import { fonts } from '../../styles/common'
 
 function commaSeparatedString(arr) {
   return arr.reduce((acc, str) => (acc.length ? `${acc}, ${str}` : str), '')
 }
 
+// TODO: Styled components
 function Lightbox(props) {
   return (
     <div className="Lightbox">
@@ -131,7 +133,7 @@ function Lightbox(props) {
         }
 
         .Learnings {
-          font-family: 'Arvo', serif;
+          font-family: ${fonts.PRIMARY};
           display: inline-block;
           margin-bottom: 1rem;
         }

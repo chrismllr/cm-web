@@ -2,32 +2,33 @@ import React from 'react'
 import format from 'date-fns/format'
 import { FooterLink } from '../Links'
 import { FlexContainer, Section } from '../Layout'
+import { palette } from '../../styles/common'
 
 export default () => (
   <Section className="Footer">
     <FlexContainer>
       <div className="Footer-col1">
-        <h3 data-hook="questions" className="AnyQuestions">Any questions?</h3>
-        <a className="Digits-link" href="mailto:chrsmllr@gmail.com" data-hook="questions-mailto">You got my digits.</a>
-        <p className="Footer-dim" data-hook="copyright">&copy; Chris Miller {format(new Date(), 'YYYY')}</p>
-      </div>
-
-      <div className="Footer-col2">
+        <h1>Chris Miller</h1>
         <FooterLink href="http://github.com/chrismllr" data-hook="github">
           <span className="Arrow">></span> github
         </FooterLink>
         <FooterLink href="mailto:chrsmllr@gmail.com">
           <span className="Arrow">></span> e-mail
         </FooterLink>
+
+        <p className="Footer-dim" data-hook="copyright">
+          &copy; Chris Miller {format(new Date(), 'YYYY')}
+        </p>
       </div>
     </FlexContainer>
 
     <style jsx>{`
       section {
-        background-color: #f8f8f8;
+        background-color: ${palette.BG};
       }
 
-      .Footer-col1, .Footer-col2 {
+      .Footer-col1,
+      .Footer-col2 {
         width: 50%;
       }
 
@@ -41,28 +42,27 @@ export default () => (
 
       .Digits-link {
         display: block;
-        letter-spacing: .01rem;
-        color: #FB0101;
+        letter-spacing: 0.01rem;
+        color: ${palette.PRIMARY};
         text-decoration: underline;
       }
 
       .Arrow {
-        color: #222;
+        color: ${palette.TEXT};
         font-weight: 700;
         font-size: 1.25rem;
         line-height: 1;
-        margin-right: .2rem;
+        margin-right: 0.2rem;
       }
 
-
       .AnyQuestions {
-        color: #222;
-        margin-bottom: .5rem;
+        color: ${palette.TEXT};
+        margin-bottom: 0.5rem;
         line-height: 1.2;
       }
 
       .Footer a {
-        transition: .5s ease-in-out;
+        transition: 0.5s ease-in-out;
         cursor: pointer;
       }
 
