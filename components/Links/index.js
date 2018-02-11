@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { palette } from '../../styles/common'
 
+// TODO: tests
 export const OutsideLink = styled.a.attrs({
   rel: 'noopener',
   target: '_blank'

@@ -4,6 +4,7 @@ import { FooterLink } from '../Links'
 import { FlexContainer, Section } from '../Layout'
 import { palette } from '../../styles/common'
 
+// TODO: styled components
 export default () => (
   <Section className="Footer">
     <FlexContainer>

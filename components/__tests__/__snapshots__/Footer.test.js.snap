@@ -9,38 +9,15 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
   >
     <div
       className="Footer-col1"
-      data-jsx={1068436732}
+      data-jsx={2165077647}
     >
-      <h3
-        className="AnyQuestions"
-        data-hook="questions"
-        data-jsx={1068436732}
+      <h1
+        data-jsx={2165077647}
       >
-        Any questions?
-      </h3>
+        Chris Miller
+      </h1>
       <a
-        className="Digits-link"
-        data-hook="questions-mailto"
-        data-jsx={1068436732}
-        href="mailto:chrsmllr@gmail.com"
-      >
-        You got my digits.
-      </a>
-      <p
-        className="Footer-dim"
-        data-hook="copyright"
-        data-jsx={1068436732}
-      >
-        © Chris Miller 
-        2018
-      </p>
-    </div>
-    <div
-      className="Footer-col2"
-      data-jsx={1068436732}
-    >
-      <a
-        className="sc-htpNat ifCQge sc-bdVaJa gtmQnx"
+        className="sc-htpNat dKdIsx sc-bdVaJa gtmQnx"
         data-hook="github"
         href="http://github.com/chrismllr"
         rel="noopener"
@@ -48,26 +25,34 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
       >
         <span
           className="Arrow"
-          data-jsx={1068436732}
+          data-jsx={2165077647}
         >
           &gt;
         </span>
          github
       </a>
       <a
-        className="sc-htpNat ifCQge sc-bdVaJa gtmQnx"
+        className="sc-htpNat dKdIsx sc-bdVaJa gtmQnx"
         href="mailto:chrsmllr@gmail.com"
         rel="noopener"
         target="_blank"
       >
         <span
           className="Arrow"
-          data-jsx={1068436732}
+          data-jsx={2165077647}
         >
           &gt;
         </span>
          e-mail
       </a>
+      <p
+        className="Footer-dim"
+        data-hook="copyright"
+        data-jsx={2165077647}
+      >
+        © Chris Miller 
+        2018
+      </p>
     </div>
   </div>
 </section>

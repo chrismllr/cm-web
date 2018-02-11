@@ -8,6 +8,7 @@ const propTypes = {
   toggleLightbox: PropTypes.func
 }
 
+// TODO: abstract into styled.js
 const ProjectImg = styled.img.attrs({
   role: 'button'
 })`
@@ -40,6 +41,7 @@ const ProjectImg = styled.img.attrs({
   }
 `
 
+// TODO: tests
 function Projects(props) {
   return (
     <Section>
