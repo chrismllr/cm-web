@@ -31,4 +31,10 @@ export const FooterLink = styled(OutsideLink)`
   letter-spacing: 0.01rem;
   color: ${palette.PRIMARY};
   text-decoration: none;
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.5;
+  }
 `

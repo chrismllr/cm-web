@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import Projects from '../components/Projects'
-import Footer from '../components/Footer'
-import withKeyCmds from '../hoc/with-key-commands'
-import AsyncComponent from '../hoc/AsyncComponent'
-import { actions } from '../modules/lightbox.duck'
+import Projects from '../../components/Projects'
+import Footer from '../../components/Footer'
+import withKeyCmds from '../../hoc/with-key-commands'
+import AsyncComponent from '../../hoc/AsyncComponent'
+import { actions } from '../../modules/lightbox.duck'
 import { AppWrapper } from './styled'
 
 function toggleLightbox(dispatch, p, value) {
@@ -17,7 +17,7 @@ function toggleLightbox(dispatch, p, value) {
 }
 
 function lightboxLoader() {
-  return import('../components/Lightbox')
+  return import('../../components/Lightbox')
 }
 
 function LightboxAsync(props) {
