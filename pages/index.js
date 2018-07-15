@@ -50,7 +50,6 @@ class CoreLayout extends React.Component {
             font-family: ${fonts.PRIMARY};
             margin: 0;
             letter-spacing: 0.01rem;
-            font-weight: 900;
           }
 
           h4,

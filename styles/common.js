@@ -8,6 +8,6 @@ export const palette = {
 }
 
 export const fonts = {
-  PRIMARY: '"Arvo", serif',
+  PRIMARY: '"Paytone One", serif',
   SECONDARY: '"Jaldi", sans-serif'
 }

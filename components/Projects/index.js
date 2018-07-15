@@ -4,7 +4,17 @@ import styled from 'styled-components'
 import { Section, Container } from '../Layout'
 
 const propTypes = {
-  projects: PropTypes.shape({}),
+  projects: PropTypes.objectOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      img: PropTypes.string,
+      name: PropTypes.string,
+      description: PropTypes.string,
+      company: PropTypes.string,
+      technologies: PropTypes.arrayOf(PropTypes.string),
+      learnings: PropTypes.arrayOf(PropTypes.string)
+    })
+  ),
   toggleLightbox: PropTypes.func
 }
 
@@ -30,7 +40,7 @@ const ProjectImg = styled.img.attrs({
     width: auto;
     max-width: calc(50% - 2rem);
 
-    &:nth-child(n + 2) {
+    &:nth-child(n*2) {
       transform: rotate(-1deg);
     }
 

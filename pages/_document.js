@@ -3,10 +3,17 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
-  render() {
+  static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
-    const main = sheet.collectStyles(<Main />)
+    const page = renderPage(App => props =>
+      sheet.collectStyles(<App {...props} />)
+    )
     const styleTags = sheet.getStyleElement()
+
+    return { ...page, styleTags }
+  }
+
+  render() {
     return (
       <html>
         <Head>
@@ -20,7 +27,7 @@ export default class MyDocument extends Document {
             content="UI Engineer/ Web Developer living in Dallas, TX."
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Jaldi:400,700|Arvo:400,700|Material+Icons"
+            href="https://fonts.googleapis.com/css?family=Jaldi:400,700|Paytone+One|Material+Icons"
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="/static/favicon.png" />
@@ -94,7 +101,6 @@ export default class MyDocument extends Document {
             sizes="16x16"
             href="static/favicon/favicon-16x16.png"
           />
-          {styleTags}
 
           <meta name="msapplication-TileColor" content="#f8f8f8" />
           <meta
@@ -102,9 +108,13 @@ export default class MyDocument extends Document {
             content="static/favicon/ms-icon-144x144.png"
           />
           <meta name="theme-color" content="#ffff6b" />
+
+          {/* Styled-components Render styles for SSR */}
+          {this.props.styleTags}
         </Head>
+
         <body>
-          <div className="root">{main}</div>
+          <Main />
           <NextScript />
         </body>
       </html>

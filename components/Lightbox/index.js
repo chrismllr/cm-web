@@ -81,7 +81,7 @@ function Lightbox(props) {
           left: 0;
           right: 0;
           overflow-y: auto;
-          background-color: rgba(255, 255, 107, 0.98);
+          background-color: rgba(255, 255, 255, 0.98);
           z-index: 100;
           padding: 2rem;
 

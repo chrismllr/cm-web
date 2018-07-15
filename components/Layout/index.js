@@ -8,10 +8,14 @@ export const Container = styled.div`
   height: auto;
   margin: 0 auto;
   padding: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
   padding-left: calc(2rem + env(safe-area-inset-left));
   padding-right: calc(2rem + env(safe-area-inset-right));
 
   @media screen and (min-width: 768px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
     padding-left: calc(3rem + env(safe-area-inset-left));
     padding-right: calc(3rem + env(safe-area-inset-right));
   }
