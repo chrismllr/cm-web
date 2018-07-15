@@ -36,9 +36,12 @@ const ProjectImg = styled.img.attrs({
   }
 
   @media screen and (min-width: 768px) {
-    margin-right: 2rem;
     width: auto;
-    max-width: calc(50% - 2rem);
+    max-width: calc(50% - 1rem);
+
+    &:nth-child(odd) {
+      margin-right: 2rem;
+    }
 
     &:nth-child(n*2) {
       transform: rotate(-1deg);

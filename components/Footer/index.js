@@ -1,18 +1,25 @@
 import React from 'react'
+import styled from 'styled-components'
 import format from 'date-fns/format'
 import { FooterLink } from '../Links'
 import { FlexContainer, Section } from '../Layout'
 import { palette } from '../../styles/common'
 
-// TODO: styled components
+const FooterSection = styled(Section)`
+  @media (min-width: 630px) {
+    padding: 0 0 0 4rem !important;
+  }
+`
+
+// TODO: Convert to styled-components
 export default () => (
-  <Section className="Footer">
+  <FooterSection className="Footer">
     <FlexContainer>
       <div className="Footer-col1">
-        <h1>Chris Miller</h1>
         <FooterLink href="http://github.com/chrismllr" data-hook="github">
           <span className="Arrow">></span> github
         </FooterLink>
+
         <FooterLink href="mailto:chrsmllr@gmail.com">
           <span className="Arrow">></span> e-mail
         </FooterLink>
@@ -70,12 +77,6 @@ export default () => (
       .Footer a:hover {
         opacity: 1;
       }
-
-      @media (min-width: 630px) {
-        .Footer {
-          padding: 4rem 0;
-        }
-      }
     `}</style>
-  </Section>
+  </FooterSection>
 )

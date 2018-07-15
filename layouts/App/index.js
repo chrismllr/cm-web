@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { connect } from 'react-redux'
 
 import Projects from '../../components/Projects'
 import Footer from '../../components/Footer'
+import { Section, Container } from '../../components/Layout'
 import withKeyCmds from '../../hoc/with-key-commands'
 import AsyncComponent from '../../hoc/AsyncComponent'
 import { actions } from '../../modules/lightbox.duck'
@@ -24,6 +26,10 @@ function LightboxAsync(props) {
   return <AsyncComponent {...props} loader={lightboxLoader} />
 }
 
+const HeaderSection = styled(Section)`
+  padding-bottom: 0;
+`
+
 class App extends React.Component {
   componentDidMount() {
     const { addKeyCommand, dispatch } = this.props
@@ -36,6 +42,11 @@ class App extends React.Component {
 
     return (
       <AppWrapper>
+        <HeaderSection>
+          <Container style={{ textAlign: 'right' }}>
+            <h1>Chris Miller</h1>
+          </Container>
+        </HeaderSection>
         <Projects
           projects={projects}
           toggleLightbox={p => toggleLightbox(dispatch, p, true)()}
