@@ -16,7 +16,7 @@
     "prettier": "prettier --single-quote --no-semi --write '{layouts,modules,hoc,components,utils,store,pages}/*.js'"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "yarn prettier", "git add"]
+    "*.js": ["yarn lint", "yarn prettier", "git add"]
   },
   "repository": "git://github.com/chrismllr/cm-web.git",
   "keywords": [
