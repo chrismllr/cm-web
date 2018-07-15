@@ -2,20 +2,15 @@
 
 exports[`(Component) Footer Renders to snapshot 1`] = `
 <section
-  className="Footer sc-EHOje DwaPY"
+  className="Footer sc-bZQynM iyPkwI sc-EHOje DwaPY"
 >
   <div
-    className="sc-ifAKCX iBDHIg sc-bxivhb gBIlHg"
+    className="sc-ifAKCX iBDHIg sc-bxivhb iZKvNm"
   >
     <div
       className="Footer-col1"
-      data-jsx={2165077647}
+      data-jsx={1500592777}
     >
-      <h1
-        data-jsx={2165077647}
-      >
-        Chris Miller
-      </h1>
       <a
         className="sc-htpNat dKdIsx sc-bdVaJa gtmQnx"
         data-hook="github"
@@ -25,7 +20,7 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
       >
         <span
           className="Arrow"
-          data-jsx={2165077647}
+          data-jsx={1500592777}
         >
           &gt;
         </span>
@@ -39,7 +34,7 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
       >
         <span
           className="Arrow"
-          data-jsx={2165077647}
+          data-jsx={1500592777}
         >
           &gt;
         </span>
@@ -48,7 +43,7 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
       <p
         className="Footer-dim"
         data-hook="copyright"
-        data-jsx={2165077647}
+        data-jsx={1500592777}
       >
         © Chris Miller 
         2018

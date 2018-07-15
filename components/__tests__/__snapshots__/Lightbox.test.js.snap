@@ -3,16 +3,16 @@
 exports[`(Component) Lightbox Renders to snapshot 1`] = `
 <div
   className="Lightbox"
-  data-jsx={1425536732}
+  data-jsx={1785783544}
 >
   <a
     className="Back"
     data-hook="close"
-    data-jsx={1425536732}
+    data-jsx={1785783544}
     onClick={[Function]}
   >
     <span
-      data-jsx={1425536732}
+      data-jsx={1785783544}
     >
       ←
     </span>
@@ -20,64 +20,64 @@ exports[`(Component) Lightbox Renders to snapshot 1`] = `
   <img
     alt="JLeveritt"
     className="Image"
-    data-jsx={1425536732}
+    data-jsx={1785783544}
     src="img.jpg"
   />
   <div
     className="Lb-content"
-    data-jsx={1425536732}
+    data-jsx={1785783544}
   >
     <div
       className="Col1"
-      data-jsx={1425536732}
+      data-jsx={1785783544}
     >
       <h2
-        data-jsx={1425536732}
+        data-jsx={1785783544}
       >
         JLeveritt
         <a
           className="Project-link"
           data-hook="project-link"
-          data-jsx={1425536732}
+          data-jsx={1785783544}
           href="www.project.com"
           rel="noopener"
           target="_blank"
         >
           <i
             className="icon icon-link"
-            data-jsx={1566661193}
+            data-jsx={1648109001}
             style={undefined}
           />
         </a>
       </h2>
       <p
         className="Company"
-        data-jsx={1425536732}
+        data-jsx={1785783544}
       >
         Personal
       </p>
       <p
         className="Sub"
-        data-jsx={1425536732}
+        data-jsx={1785783544}
       >
         React
       </p>
     </div>
     <div
       className="Col2"
-      data-jsx={1425536732}
+      data-jsx={1785783544}
     >
       <span
         className="Learnings"
-        data-jsx={1425536732}
+        data-jsx={1785783544}
       >
         Learnings:
       </span>
       <ul
-        data-jsx={1425536732}
+        data-jsx={1785783544}
       >
         <li
-          data-jsx={1425536732}
+          data-jsx={1785783544}
         >
           Did cool stuff
         </li>
