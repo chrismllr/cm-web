@@ -4,19 +4,30 @@ import styled from 'styled-components'
 import { Section, Container } from '../Layout'
 
 const propTypes = {
-  projects: PropTypes.shape({}),
+  projects: PropTypes.objectOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      img: PropTypes.string,
+      name: PropTypes.string,
+      description: PropTypes.string,
+      company: PropTypes.string,
+      technologies: PropTypes.arrayOf(PropTypes.string),
+      learnings: PropTypes.arrayOf(PropTypes.string)
+    })
+  ),
   toggleLightbox: PropTypes.func
 }
 
+// TODO: abstract into styled.js
 const ProjectImg = styled.img.attrs({
   role: 'button'
 })`
   cursor: pointer;
-  max-width: 400px;
   width: 100%;
   margin-bottom: 3rem;
   text-align: center;
   transform: rotate(1deg);
+  transition: 0.8s ease;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px 2px;
   border-radius: 6px;
 
@@ -25,17 +36,25 @@ const ProjectImg = styled.img.attrs({
   }
 
   @media screen and (min-width: 768px) {
-    margin-right: 2rem;
-    transition: 0.8s ease;
     width: auto;
-    max-width: calc(50% - 2rem);
+    max-width: calc(50% - 1rem);
 
-    &:nth-child(n + 2) {
+    &:nth-child(odd) {
+      margin-right: 2rem;
+    }
+
+    &:nth-child(n*2) {
       transform: rotate(-1deg);
+    }
+
+    &:hover {
+      transform: rotate(0deg);
+      box-shadow: rgba(0, 0, 0, 0.3) 0 0 25px 2px;
     }
   }
 `
 
+// TODO: tests
 function Projects(props) {
   return (
     <Section>

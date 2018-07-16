@@ -10,13 +10,13 @@
     "build": "next build",
     "start": "NODE_ENV=production node server",
     "heroku-postbuild": "heroku-nextjs-build",
-    "lint": "eslint components layouts pages tests",
+    "lint": "eslint components layouts pages tests --fix",
     "generate": "DEBUG=Generator node bin/make.js",
     "precommit": "lint-staged",
     "prettier": "prettier --single-quote --no-semi --write '{layouts,modules,hoc,components,utils,store,pages}/*.js'"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "yarn prettier", "git add"]
+    "*.js": ["yarn lint", "yarn prettier", "git add"]
   },
   "repository": "git://github.com/chrismllr/cm-web.git",
   "keywords": [

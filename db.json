@@ -2,6 +2,20 @@
   "projects": [
     {
       "id": "1",
+      "img": "/static/projects/cbre360.png",
+      "name": "CBRE 360",
+      "description": "Building services app providing scheduling and indoor wayfinding",
+      "company": "Dialexa",
+      "technologies": ["React Native", "Java", "Obj-C", "Redux", "RxJS", "Normalizr"],
+      "learnings": [
+        "React Native project using redux, redux-observable, and normalizr for state management",
+        "Mobile BaaS integration to achieve offline access by caching request payloads",
+        "Native components consuming SDKs for indoor wayfinding capabilities",
+        "Full CD pipeline using Fastlane to build both Android/ iOS applications to respective app stores"
+      ]
+    },
+    {
+      "id": "2",
       "img": "/static/projects/justin-leveritt.jpg",
       "name": "Justin Leveritt",
       "description": "Photographer: portfolio website",
@@ -15,20 +29,6 @@
       ]
     },
     {
-      "id": "2",
-      "img": "/static/projects/parkhub.jpg",
-      "name": "Parkhub",
-      "description": "Admin dashboard for mobile parking platform",
-      "company": "Dialexa",
-      "technologies": ["Ember.js", "D3/ C3"],
-      "learnings": [
-        "Simplifying UI while representing large amounts of real-time data",
-        "JWT token-based authentication",
-        "Numerous heavy CRUD operations",
-        "High traffic driven optimizations"
-      ]
-    },
-    {
       "id": "3",
       "img": "/static/projects/flexdrive.jpg",
       "name": "Flexdrive",
@@ -39,6 +39,20 @@
         "Two unique portals, both consuming webpack build & UI-kit as dependencies",
         "UI-kit provides reusable components, redux modules, styles, and utils",
         "Mapbox integration for mapping vehicle's locations"
+      ]
+    },
+    {
+      "id": "4",
+      "img": "/static/projects/parkhub.jpg",
+      "name": "Parkhub",
+      "description": "Admin dashboard for mobile parking platform",
+      "company": "Dialexa",
+      "technologies": ["Ember.js", "D3/ C3"],
+      "learnings": [
+        "Simplifying UI while representing large amounts of real-time data",
+        "JWT token-based authentication",
+        "Numerous heavy CRUD operations",
+        "High traffic driven optimizations"
       ]
     }
   ]
