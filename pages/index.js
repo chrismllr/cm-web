@@ -25,7 +25,7 @@ class CoreLayout extends React.Component {
 
           html {
             height: 100%;
-            font-size: 16px;
+            font-size: 14px;
             min-width: 100%;
             -webkit-font-smoothing: subpixel-antialiased;
           }

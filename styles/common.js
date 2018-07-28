@@ -1,3 +1,5 @@
+import { css } from 'styled-components'
+
 export const palette = {
   TEXT: '#222',
   TEXT_LT: '#4a4a4a',
@@ -9,5 +11,22 @@ export const palette = {
 
 export const fonts = {
   PRIMARY: '"Paytone One", serif',
-  SECONDARY: '"Jaldi", sans-serif'
+  SECONDARY: '"IBM Plex Sans", sans-serif'
 }
+
+const sizes = {
+  tablet: 630,
+  desktop: 768
+}
+
+export const media = Object.keys(sizes).reduce(
+  (acc, label) => ({
+    ...acc,
+    [label]: (...args) => css`
+      @media screen and (min-width: ${sizes[label] / 14}rem) {
+        ${css(...args)};
+      }
+    `
+  }),
+  {}
+)

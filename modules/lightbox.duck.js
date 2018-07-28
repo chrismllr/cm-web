@@ -29,14 +29,14 @@ const toggleLightbox = newVal => dispatch => {
   })
 }
 
-const setLghtboxProject = (p = {}) => ({
+const setLightboxProject = (p = {}) => ({
   type: SET_LIGHTBOX_PROJECT,
   payload: p
 })
 
 export const actions = {
   toggleLightbox,
-  setLghtboxProject
+  setLightboxProject
 }
 
 const ACTION_HANDLERS = {
