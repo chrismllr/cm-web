@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import format from 'date-fns/format'
 import { FooterLink } from '../Links'
 import { FlexContainer, Section } from '../Layout'
-import { palette } from '../../styles/common'
+import { palette, media } from '../../styles/common'
 
 const FooterSection = styled(Section)`
-  @media (min-width: 630px) {
-    padding: 0 0 0 4rem !important;
-  }
+  ${media.tablet`
+    padding: 0 4rem 4rem 4rem;
+  `};
 `
 
 // TODO: Convert to styled-components

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Section, Container } from '../Layout'
+import { media } from '../../styles/common'
 
 const propTypes = {
   projects: PropTypes.objectOf(
@@ -35,7 +36,7 @@ const ProjectImg = styled.img.attrs({
     transform: rotate(-1deg);
   }
 
-  @media screen and (min-width: 768px) {
+  ${media.desktop`
     width: auto;
     max-width: calc(50% - 1rem);
 
@@ -51,7 +52,7 @@ const ProjectImg = styled.img.attrs({
       transform: rotate(0deg);
       box-shadow: rgba(0, 0, 0, 0.3) 0 0 25px 2px;
     }
-  }
+  `};
 `
 
 // TODO: tests

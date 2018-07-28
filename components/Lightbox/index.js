@@ -4,7 +4,9 @@ import MaterialIcon from '../MaterialIcon'
 import { fonts } from '../../styles/common'
 
 function commaSeparatedString(arr) {
-  return arr.reduce((acc, str) => (acc.length ? `${acc}, ${str}` : str), '')
+  return arr.reduce((acc, str) => {
+    return acc.length ? `${acc}, ${str}` : str
+  }, '')
 }
 
 // TODO: Styled components
@@ -177,7 +179,7 @@ function Lightbox(props) {
           font-style: italic;
         }
 
-        @media (min-width: 630px) {
+        @media screen and (min-width: 630px) {
           .Lightbox {
             display: flex;
             align-items: center;
@@ -204,18 +206,14 @@ function Lightbox(props) {
             border-right: 1px solid rgba(34, 34, 34, 0.1);
           }
 
-          .Company {
-            margin-bottom: 1rem;
-          }
-
           .Col2 {
             padding: 0.66rem 1rem 1rem 3rem;
           }
 
           .Col1 h2 {
+            line-height: 1.1;
+            margin-bottom: 1rem;
             font-size: 2.5rem;
-            margin-bottom: -0.5rem;
-          }
         }
       `}</style>
     </div>

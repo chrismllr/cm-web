@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { media } from '../../styles/common'
 
 // TODO: tests
 export const Container = styled.div`
@@ -13,12 +14,12 @@ export const Container = styled.div`
   padding-left: calc(2rem + env(safe-area-inset-left));
   padding-right: calc(2rem + env(safe-area-inset-right));
 
-  @media screen and (min-width: 768px) {
+  ${media.desktop`
     padding-left: 3rem;
     padding-right: 3rem;
     padding-left: calc(3rem + env(safe-area-inset-left));
     padding-right: calc(3rem + env(safe-area-inset-right));
-  }
+  `};
 `
 
 export const FlexContainer = styled(Container)`
@@ -31,7 +32,7 @@ export const FlexContainer = styled(Container)`
 export const Section = styled.section`
   padding: 2rem 0;
 
-  @media screen and (min-width: 630px) {
+  ${media.tablet`
     padding: 4rem 0;
-  }
+  `};
 `

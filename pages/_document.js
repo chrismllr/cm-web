@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
             content="UI Engineer/ Web Developer living in Dallas, TX."
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Jaldi:400,700|Paytone+One|Material+Icons"
+            href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,500i|Paytone+One|Material+Icons"
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="/static/favicon.png" />
