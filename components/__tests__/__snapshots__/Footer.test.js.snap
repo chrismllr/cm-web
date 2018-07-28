@@ -2,17 +2,17 @@
 
 exports[`(Component) Footer Renders to snapshot 1`] = `
 <section
-  className="Footer sc-bZQynM iyPkwI sc-EHOje DwaPY"
+  className="Footer sc-EHOje cWTpoR sc-ifAKCX euVLKM"
 >
   <div
-    className="sc-ifAKCX iBDHIg sc-bxivhb iZKvNm"
+    className="sc-bxivhb jOMjuI sc-htpNat zRgqY"
   >
     <div
       className="Footer-col1"
       data-jsx={1500592777}
     >
       <a
-        className="sc-htpNat dKdIsx sc-bdVaJa gtmQnx"
+        className="sc-bwzfXH JxOrD sc-bdVaJa gtmQnx"
         data-hook="github"
         href="http://github.com/chrismllr"
         rel="noopener"
@@ -27,7 +27,7 @@ exports[`(Component) Footer Renders to snapshot 1`] = `
          github
       </a>
       <a
-        className="sc-htpNat dKdIsx sc-bdVaJa gtmQnx"
+        className="sc-bwzfXH JxOrD sc-bdVaJa gtmQnx"
         href="mailto:chrsmllr@gmail.com"
         rel="noopener"
         target="_blank"
